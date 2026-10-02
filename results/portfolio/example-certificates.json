@@ -1,0 +1,1465 @@
+{
+  "class-coverage": {
+    "cost": 3,
+    "kind": "optimal_portfolio",
+    "obstruction_basis": [
+      3,
+      5,
+      9
+    ],
+    "representatives": [
+      {
+        "fibers": [
+          {
+            "summary_state": [
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              2
+            ],
+            "target_state": 2
+          },
+          {
+            "summary_state": [
+              3
+            ],
+            "target_state": 3
+          },
+          {
+            "summary_state": [
+              4
+            ],
+            "target_state": 4
+          },
+          {
+            "summary_state": [
+              5
+            ],
+            "target_state": 5
+          },
+          {
+            "summary_state": [
+              6
+            ],
+            "target_state": 6
+          },
+          {
+            "summary_state": [
+              7
+            ],
+            "target_state": 7
+          }
+        ],
+        "update": "cat-and-dog-covered"
+      },
+      {
+        "fibers": [
+          {
+            "summary_state": [
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              2
+            ],
+            "target_state": 2
+          },
+          {
+            "summary_state": [
+              3
+            ],
+            "target_state": 3
+          },
+          {
+            "summary_state": [
+              4
+            ],
+            "target_state": 4
+          },
+          {
+            "summary_state": [
+              5
+            ],
+            "target_state": 5
+          },
+          {
+            "summary_state": [
+              6
+            ],
+            "target_state": 6
+          },
+          {
+            "summary_state": [
+              7
+            ],
+            "target_state": 7
+          }
+        ],
+        "update": "bird-covered"
+      }
+    ],
+    "selected_atoms": [
+      "seen-class-bitset"
+    ],
+    "selected_mask": 1
+  },
+  "field-deletion": {
+    "cost": 2,
+    "kind": "optimal_portfolio",
+    "obstruction_basis": [
+      1
+    ],
+    "representatives": [
+      {
+        "fibers": [
+          {
+            "summary_state": [
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              2
+            ],
+            "target_state": 2
+          }
+        ],
+        "update": "two-incidents"
+      }
+    ],
+    "selected_atoms": [
+      "debug-or-high-count-2"
+    ],
+    "selected_mask": 1
+  },
+  "joint-marginals": {
+    "cost": 2,
+    "kind": "optimal_portfolio",
+    "obstruction_basis": [
+      8
+    ],
+    "representatives": [
+      {
+        "fibers": [
+          {
+            "summary_state": [
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              2
+            ],
+            "target_state": 2
+          }
+        ],
+        "update": "two-disagreements"
+      }
+    ],
+    "selected_atoms": [
+      "disagreement-count-2"
+    ],
+    "selected_mask": 8
+  },
+  "label-disagreement": {
+    "cost": 5,
+    "kind": "optimal_portfolio",
+    "obstruction_basis": [
+      1,
+      4
+    ],
+    "representatives": [
+      {
+        "fibers": [
+          {
+            "summary_state": [
+              0,
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              0,
+              1
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              0,
+              4
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              1,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              2
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              3
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              4
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              2,
+              1
+            ],
+            "target_state": 2
+          },
+          {
+            "summary_state": [
+              2,
+              2
+            ],
+            "target_state": 2
+          },
+          {
+            "summary_state": [
+              2,
+              3
+            ],
+            "target_state": 2
+          },
+          {
+            "summary_state": [
+              2,
+              4
+            ],
+            "target_state": 2
+          }
+        ],
+        "update": "two-disagreements"
+      },
+      {
+        "fibers": [
+          {
+            "summary_state": [
+              0,
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              0,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              0,
+              4
+            ],
+            "target_state": 4
+          },
+          {
+            "summary_state": [
+              1,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              2
+            ],
+            "target_state": 2
+          },
+          {
+            "summary_state": [
+              1,
+              3
+            ],
+            "target_state": 3
+          },
+          {
+            "summary_state": [
+              1,
+              4
+            ],
+            "target_state": 4
+          },
+          {
+            "summary_state": [
+              2,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              2,
+              2
+            ],
+            "target_state": 2
+          },
+          {
+            "summary_state": [
+              2,
+              3
+            ],
+            "target_state": 3
+          },
+          {
+            "summary_state": [
+              2,
+              4
+            ],
+            "target_state": 4
+          }
+        ],
+        "update": "last-both-positive"
+      }
+    ],
+    "selected_atoms": [
+      "disagreement-count-2",
+      "last-joint-label"
+    ],
+    "selected_mask": 5
+  },
+  "label-field-rename": {
+    "cost": 4,
+    "kind": "optimal_portfolio",
+    "obstruction_basis": [
+      2,
+      5
+    ],
+    "representatives": [
+      {
+        "fibers": [
+          {
+            "summary_state": [
+              0,
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              0,
+              1
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              1,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              2
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              2,
+              1
+            ],
+            "target_state": 2
+          },
+          {
+            "summary_state": [
+              2,
+              2
+            ],
+            "target_state": 2
+          }
+        ],
+        "update": "two-positives"
+      },
+      {
+        "fibers": [
+          {
+            "summary_state": [
+              0,
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              0,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              2
+            ],
+            "target_state": 2
+          },
+          {
+            "summary_state": [
+              2,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              2,
+              2
+            ],
+            "target_state": 2
+          }
+        ],
+        "update": "last-positive"
+      }
+    ],
+    "selected_atoms": [
+      "positive-count-2",
+      "last-old-label"
+    ],
+    "selected_mask": 3
+  },
+  "marginals-only-infeasible": {
+    "cost": 4,
+    "history_left": [
+      "h0:a=false,b=false",
+      "h3:a=true,b=true"
+    ],
+    "history_right": [
+      "h1:a=false,b=true",
+      "h2:a=true,b=false"
+    ],
+    "kind": "unsafe_portfolio",
+    "selected_mask": 7,
+    "separator_atoms": [],
+    "separator_mask": 0,
+    "suffix": [],
+    "target_left": 0,
+    "target_right": 2,
+    "update": "two-disagreements"
+  },
+  "missingness-streak": {
+    "cost": 3,
+    "kind": "optimal_portfolio",
+    "obstruction_basis": [
+      5,
+      10
+    ],
+    "representatives": [
+      {
+        "fibers": [
+          {
+            "summary_state": [
+              0,
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              1,
+              0
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              2
+            ],
+            "target_state": 1
+          }
+        ],
+        "update": "ever-null"
+      },
+      {
+        "fibers": [
+          {
+            "summary_state": [
+              0,
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              1,
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              1,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              2
+            ],
+            "target_state": 2
+          }
+        ],
+        "update": "two-null-streak"
+      }
+    ],
+    "selected_atoms": [
+      "ever-missing",
+      "missing-run-2"
+    ],
+    "selected_mask": 3
+  },
+  "rolling-pattern": {
+    "cost": 4,
+    "kind": "optimal_portfolio",
+    "obstruction_basis": [
+      1
+    ],
+    "representatives": [
+      {
+        "fibers": [
+          {
+            "summary_state": [
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              2
+            ],
+            "target_state": 2
+          },
+          {
+            "summary_state": [
+              3
+            ],
+            "target_state": 3
+          },
+          {
+            "summary_state": [
+              4
+            ],
+            "target_state": 4
+          },
+          {
+            "summary_state": [
+              5
+            ],
+            "target_state": 5
+          },
+          {
+            "summary_state": [
+              6
+            ],
+            "target_state": 6
+          },
+          {
+            "summary_state": [
+              7
+            ],
+            "target_state": 7
+          },
+          {
+            "summary_state": [
+              8
+            ],
+            "target_state": 8
+          },
+          {
+            "summary_state": [
+              9
+            ],
+            "target_state": 9
+          },
+          {
+            "summary_state": [
+              10
+            ],
+            "target_state": 10
+          },
+          {
+            "summary_state": [
+              11
+            ],
+            "target_state": 11
+          },
+          {
+            "summary_state": [
+              12
+            ],
+            "target_state": 12
+          },
+          {
+            "summary_state": [
+              13
+            ],
+            "target_state": 13
+          },
+          {
+            "summary_state": [
+              14
+            ],
+            "target_state": 14
+          }
+        ],
+        "update": "true-false-true"
+      },
+      {
+        "fibers": [
+          {
+            "summary_state": [
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              1
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              2
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              3
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              4
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              5
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              6
+            ],
+            "target_state": 2
+          },
+          {
+            "summary_state": [
+              7
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              8
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              9
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              10
+            ],
+            "target_state": 2
+          },
+          {
+            "summary_state": [
+              11
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              12
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              13
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              14
+            ],
+            "target_state": 2
+          }
+        ],
+        "update": "two-alert-streak"
+      }
+    ],
+    "selected_atoms": [
+      "last-three-alarms"
+    ],
+    "selected_mask": 1
+  },
+  "schema-rename-status": {
+    "cost": 4,
+    "kind": "optimal_portfolio",
+    "obstruction_basis": [
+      2,
+      5
+    ],
+    "representatives": [
+      {
+        "fibers": [
+          {
+            "summary_state": [
+              0,
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              0,
+              1
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              1,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              2
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              2,
+              1
+            ],
+            "target_state": 2
+          },
+          {
+            "summary_state": [
+              2,
+              2
+            ],
+            "target_state": 2
+          }
+        ],
+        "update": "two-bad"
+      },
+      {
+        "fibers": [
+          {
+            "summary_state": [
+              0,
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              0,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              2
+            ],
+            "target_state": 2
+          },
+          {
+            "summary_state": [
+              2,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              2,
+              2
+            ],
+            "target_state": 2
+          }
+        ],
+        "update": "last-bad"
+      }
+    ],
+    "selected_atoms": [
+      "bad-count-2",
+      "last-status"
+    ],
+    "selected_mask": 3
+  },
+  "slice-regression": {
+    "cost": 4,
+    "kind": "optimal_portfolio",
+    "obstruction_basis": [
+      8,
+      3,
+      5
+    ],
+    "representatives": [
+      {
+        "fibers": [
+          {
+            "summary_state": [
+              0,
+              0,
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              0,
+              1,
+              1
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              0,
+              1,
+              2
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              1,
+              0,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              0,
+              2
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              1,
+              2
+            ],
+            "target_state": 1
+          }
+        ],
+        "update": "error-in-A"
+      },
+      {
+        "fibers": [
+          {
+            "summary_state": [
+              0,
+              0,
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              0,
+              1,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              0,
+              1,
+              2
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              0,
+              1
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              1,
+              0,
+              2
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              1,
+              1,
+              2
+            ],
+            "target_state": 1
+          }
+        ],
+        "update": "error-in-B"
+      },
+      {
+        "fibers": [
+          {
+            "summary_state": [
+              0,
+              0,
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              0,
+              1,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              0,
+              1,
+              2
+            ],
+            "target_state": 2
+          },
+          {
+            "summary_state": [
+              1,
+              0,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              0,
+              2
+            ],
+            "target_state": 2
+          },
+          {
+            "summary_state": [
+              1,
+              1,
+              2
+            ],
+            "target_state": 2
+          }
+        ],
+        "update": "two-errors"
+      }
+    ],
+    "selected_atoms": [
+      "seen-error-A",
+      "seen-error-B",
+      "global-error-count-2"
+    ],
+    "selected_mask": 14
+  },
+  "threshold-family": {
+    "cost": 2,
+    "kind": "optimal_portfolio",
+    "obstruction_basis": [
+      4
+    ],
+    "representatives": [
+      {
+        "fibers": [
+          {
+            "summary_state": [
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              2
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              3
+            ],
+            "target_state": 1
+          }
+        ],
+        "update": "threshold-1"
+      },
+      {
+        "fibers": [
+          {
+            "summary_state": [
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              2
+            ],
+            "target_state": 2
+          },
+          {
+            "summary_state": [
+              3
+            ],
+            "target_state": 2
+          }
+        ],
+        "update": "threshold-2"
+      },
+      {
+        "fibers": [
+          {
+            "summary_state": [
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              2
+            ],
+            "target_state": 2
+          },
+          {
+            "summary_state": [
+              3
+            ],
+            "target_state": 3
+          }
+        ],
+        "update": "threshold-3"
+      }
+    ],
+    "selected_atoms": [
+      "error-count-3"
+    ],
+    "selected_mask": 4
+  },
+  "weighted-greedy-trap": {
+    "cost": 10,
+    "kind": "optimal_portfolio",
+    "obstruction_basis": [
+      4,
+      16,
+      3,
+      10
+    ],
+    "representatives": [
+      {
+        "fibers": [
+          {
+            "summary_state": [
+              0,
+              0,
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              0,
+              0,
+              1
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              0,
+              1,
+              0
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              0,
+              1,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              0,
+              0
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              0,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              1,
+              0
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              1,
+              1
+            ],
+            "target_state": 1
+          }
+        ],
+        "update": "watch-y-or-z"
+      },
+      {
+        "fibers": [
+          {
+            "summary_state": [
+              0,
+              0,
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              0,
+              0,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              0,
+              1,
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              0,
+              1,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              0,
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              1,
+              0,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              1,
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              1,
+              1,
+              1
+            ],
+            "target_state": 1
+          }
+        ],
+        "update": "watch-x"
+      },
+      {
+        "fibers": [
+          {
+            "summary_state": [
+              0,
+              0,
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              0,
+              0,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              0,
+              1,
+              0
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              0,
+              1,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              0,
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              1,
+              0,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              1,
+              0
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              1,
+              1
+            ],
+            "target_state": 1
+          }
+        ],
+        "update": "watch-x-or-z"
+      },
+      {
+        "fibers": [
+          {
+            "summary_state": [
+              0,
+              0,
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              0,
+              0,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              0,
+              1,
+              0
+            ],
+            "target_state": 0
+          },
+          {
+            "summary_state": [
+              0,
+              1,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              0,
+              0
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              0,
+              1
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              1,
+              0
+            ],
+            "target_state": 1
+          },
+          {
+            "summary_state": [
+              1,
+              1,
+              1
+            ],
+            "target_state": 1
+          }
+        ],
+        "update": "watch-x-or-y"
+      }
+    ],
+    "selected_atoms": [
+      "seen-y",
+      "seen-z",
+      "seen-x"
+    ],
+    "selected_mask": 22
+  }
+}

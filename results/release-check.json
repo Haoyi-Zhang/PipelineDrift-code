@@ -1,0 +1,171 @@
+{
+  "elapsed_seconds": 32.26429875999975,
+  "environment": {
+    "available_memory_bytes_before_run": 5143695360,
+    "cpu_count_observed": 5,
+    "free_disk_bytes_before_run": 31886786560,
+    "network_required": false,
+    "os_release_observed": "Debian GNU/Linux 13 (trixie)",
+    "platform_observed": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "python_executable": "/opt/pyvenv/bin/python",
+    "python_implementation": "CPython",
+    "python_version": "3.13.5",
+    "supported_and_checked_platform": "Linux",
+    "swap_total_bytes_observed": 0,
+    "third_party_python_packages_required": false,
+    "untested_environment_note": "macOS, Windows, PyPy, and other Python versions were not checked by this release run",
+    "workers": 1
+  },
+  "meaning": "all shipped bounded commands succeeded and deterministic scientific records matched; not external review or a general proof",
+  "reproduction": {
+    "children_cpu_seconds": 31.022448,
+    "children_peak_rss_kib": 109356,
+    "commands": [
+      {
+        "child_cpu_seconds": 7.193208,
+        "returncode": 0,
+        "step": "tests",
+        "wall_seconds": 7.205951236000146
+      },
+      {
+        "child_cpu_seconds": 0.7578680000000002,
+        "returncode": 0,
+        "step": "language-check",
+        "wall_seconds": 0.7600740800003223
+      },
+      {
+        "child_cpu_seconds": 0.7257049999999997,
+        "returncode": 0,
+        "step": "pilot",
+        "wall_seconds": 0.7275657509999292
+      },
+      {
+        "child_cpu_seconds": 1.191972999999999,
+        "returncode": 0,
+        "step": "cases-00000-06000",
+        "wall_seconds": 1.1931984550001289
+      },
+      {
+        "child_cpu_seconds": 1.636083000000001,
+        "returncode": 0,
+        "step": "cases-06000-12000",
+        "wall_seconds": 1.6401838530000532
+      },
+      {
+        "child_cpu_seconds": 1.3570619999999998,
+        "returncode": 0,
+        "step": "cases-12000-18000",
+        "wall_seconds": 1.3583532610000475
+      },
+      {
+        "child_cpu_seconds": 1.5392190000000008,
+        "returncode": 0,
+        "step": "cases-18000-24000",
+        "wall_seconds": 1.5433897809998598
+      },
+      {
+        "child_cpu_seconds": 1.529266,
+        "returncode": 0,
+        "step": "cases-24000-30000",
+        "wall_seconds": 1.5326077530003204
+      },
+      {
+        "child_cpu_seconds": 1.216667000000001,
+        "returncode": 0,
+        "step": "cases-30000-36000",
+        "wall_seconds": 1.2180173960000502
+      },
+      {
+        "child_cpu_seconds": 1.247489999999996,
+        "returncode": 0,
+        "step": "cases-36000-42000",
+        "wall_seconds": 1.2488688619996537
+      },
+      {
+        "child_cpu_seconds": 1.3025649999999995,
+        "returncode": 0,
+        "step": "cases-42000-46932",
+        "wall_seconds": 1.3038069399999586
+      },
+      {
+        "child_cpu_seconds": 0.7403770000000021,
+        "returncode": 0,
+        "step": "counter-family",
+        "wall_seconds": 0.7416763249998439
+      },
+      {
+        "child_cpu_seconds": 8.027645000000001,
+        "returncode": 0,
+        "step": "portfolio-campaign",
+        "wall_seconds": 8.03093825399992
+      },
+      {
+        "child_cpu_seconds": 0.9038750000000002,
+        "returncode": 0,
+        "step": "random-differential",
+        "wall_seconds": 0.9053467039998395
+      },
+      {
+        "child_cpu_seconds": 0.8832050000000011,
+        "returncode": 0,
+        "step": "cost-sensitivity",
+        "wall_seconds": 0.8841989090001334
+      },
+      {
+        "child_cpu_seconds": 0.7702399999999998,
+        "returncode": 0,
+        "step": "tfx-projection",
+        "wall_seconds": 0.7713174400000753
+      }
+    ],
+    "cost_perturbations": 79,
+    "declarations": 12,
+    "elapsed_seconds": 31.464728750000177,
+    "language_cells_checked": 1272,
+    "legacy_case_count": 46932,
+    "meaning": "reproduction of bounded finite checks, not independent proof, production validation, or external review",
+    "mutations": 571,
+    "parent_cpu_seconds": 0.414420091,
+    "parent_peak_rss_kib": 101152,
+    "portfolio_case_count": 20480,
+    "portfolio_masks_checked": 98304,
+    "random_portfolio_masks_checked": 2348,
+    "random_problems": 256,
+    "scientific_record_comparisons": [
+      "language-check.json",
+      "exhaustive/cases-00000-06000.csv",
+      "exhaustive/cases-06000-12000.csv",
+      "exhaustive/cases-12000-18000.csv",
+      "exhaustive/cases-18000-24000.csv",
+      "exhaustive/cases-24000-30000.csv",
+      "exhaustive/cases-30000-36000.csv",
+      "exhaustive/cases-36000-42000.csv",
+      "exhaustive/cases-42000-46932.csv",
+      "pilot/pilot.csv",
+      "pilot/scenarios.json",
+      "counter-family/counter-family.csv",
+      "counter-family/counter-certificates.json",
+      "portfolio/unary-catalogue.csv",
+      "portfolio/binary-catalogue.csv",
+      "portfolio/mutation-results.csv",
+      "portfolio/example-results.json",
+      "portfolio/example-certificates.json",
+      "random-differential/problems.jsonl",
+      "random-differential/cases.csv",
+      "random-differential/summary.json",
+      "cost-sensitivity/inputs.json",
+      "cost-sensitivity/variations.csv",
+      "cost-sensitivity/summary.json",
+      "tfx-projection/projected-declaration.json",
+      "tfx-projection/projection-map.json",
+      "tfx-projection/certificate.json",
+      "tfx-projection/result.json"
+    ],
+    "status": "commands succeeded and deterministic scientific records matched",
+    "tfx_features_projected": 5,
+    "timings_are_not_expected_to_match": true,
+    "unit_tests": 66,
+    "workers": 1
+  },
+  "status": "pass"
+}

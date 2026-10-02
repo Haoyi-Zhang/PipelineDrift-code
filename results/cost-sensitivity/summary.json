@@ -1,0 +1,11 @@
+{
+  "certificate_failures": 0,
+  "declarations_with_mask_change": 1,
+  "feasible_declarations": 11,
+  "infeasible_declarations_skipped": 1,
+  "numeric_optimum_changes": 34,
+  "optimal_mask_changes": 1,
+  "perturbations": 79,
+  "scope": "one-at-a-time integer cost perturbations over shipped feasible declarations; no claim about real storage prices",
+  "status": "pass"
+}

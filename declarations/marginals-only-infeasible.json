@@ -1,0 +1,78 @@
+{
+  "name": "marginals-only-infeasible",
+  "metadata": {
+    "motivation": "An intentionally incomplete catalogue exposes an unseparated joint-history obligation for the same two-disagreement target used by joint-marginals."
+  },
+  "history_schema": {
+    "fields": {
+      "a": [
+        false,
+        true
+      ],
+      "b": [
+        false,
+        true
+      ]
+    }
+  },
+  "future_schema": {
+    "fields": {
+      "a": [
+        false,
+        true
+      ],
+      "b": [
+        false,
+        true
+      ]
+    }
+  },
+  "retention_atoms": [
+    {
+      "name": "a-count-2",
+      "kind": "count",
+      "cap": 2,
+      "predicate": {
+        "field": "a"
+      },
+      "initial": 0
+    },
+    {
+      "name": "b-count-2",
+      "kind": "count",
+      "cap": 2,
+      "predicate": {
+        "field": "b"
+      },
+      "initial": 0
+    },
+    {
+      "name": "length-2",
+      "kind": "count",
+      "cap": 2,
+      "predicate": {
+        "const": true
+      },
+      "initial": 0
+    }
+  ],
+  "monitor_updates": [
+    {
+      "name": "two-disagreements",
+      "kind": "count_threshold",
+      "initial": 0,
+      "threshold": 2,
+      "predicate": {
+        "op": "ne",
+        "args": [
+          {
+            "field": "a"
+          },
+          {
+            "field": "b"
+          }
+        ]
+      }
+    }
+  ]
+}

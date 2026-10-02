@@ -1,0 +1,95 @@
+{
+  "name": "joint-marginals",
+  "metadata": {
+    "motivation": "Holding the two-disagreement target fixed, adding one joint disagreement counter repairs an otherwise infeasible marginal-only catalogue."
+  },
+  "history_schema": {
+    "fields": {
+      "a": [
+        false,
+        true
+      ],
+      "b": [
+        false,
+        true
+      ]
+    }
+  },
+  "future_schema": {
+    "fields": {
+      "a": [
+        false,
+        true
+      ],
+      "b": [
+        false,
+        true
+      ]
+    }
+  },
+  "retention_atoms": [
+    {
+      "name": "a-count-2",
+      "kind": "count",
+      "cap": 2,
+      "predicate": {
+        "field": "a"
+      },
+      "initial": 0
+    },
+    {
+      "name": "b-count-2",
+      "kind": "count",
+      "cap": 2,
+      "predicate": {
+        "field": "b"
+      },
+      "initial": 0
+    },
+    {
+      "name": "length-2",
+      "kind": "count",
+      "cap": 2,
+      "predicate": {
+        "const": true
+      },
+      "initial": 0
+    },
+    {
+      "name": "disagreement-count-2",
+      "kind": "count",
+      "cap": 2,
+      "predicate": {
+        "op": "ne",
+        "args": [
+          {
+            "field": "a"
+          },
+          {
+            "field": "b"
+          }
+        ]
+      },
+      "initial": 0
+    }
+  ],
+  "monitor_updates": [
+    {
+      "name": "two-disagreements",
+      "kind": "count_threshold",
+      "threshold": 2,
+      "predicate": {
+        "op": "ne",
+        "args": [
+          {
+            "field": "a"
+          },
+          {
+            "field": "b"
+          }
+        ]
+      },
+      "initial": 0
+    }
+  ]
+}

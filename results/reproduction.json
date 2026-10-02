@@ -1,0 +1,150 @@
+{
+  "status": "commands succeeded and deterministic scientific records matched",
+  "legacy_case_count": 46932,
+  "portfolio_case_count": 20480,
+  "portfolio_masks_checked": 98304,
+  "declarations": 12,
+  "mutations": 571,
+  "unit_tests": 66,
+  "language_cells_checked": 1272,
+  "random_problems": 256,
+  "random_portfolio_masks_checked": 2348,
+  "cost_perturbations": 79,
+  "tfx_features_projected": 5,
+  "scientific_record_comparisons": [
+    "language-check.json",
+    "exhaustive/cases-00000-06000.csv",
+    "exhaustive/cases-06000-12000.csv",
+    "exhaustive/cases-12000-18000.csv",
+    "exhaustive/cases-18000-24000.csv",
+    "exhaustive/cases-24000-30000.csv",
+    "exhaustive/cases-30000-36000.csv",
+    "exhaustive/cases-36000-42000.csv",
+    "exhaustive/cases-42000-46932.csv",
+    "pilot/pilot.csv",
+    "pilot/scenarios.json",
+    "counter-family/counter-family.csv",
+    "counter-family/counter-certificates.json",
+    "portfolio/unary-catalogue.csv",
+    "portfolio/binary-catalogue.csv",
+    "portfolio/mutation-results.csv",
+    "portfolio/example-results.json",
+    "portfolio/example-certificates.json",
+    "random-differential/problems.jsonl",
+    "random-differential/cases.csv",
+    "random-differential/summary.json",
+    "cost-sensitivity/inputs.json",
+    "cost-sensitivity/variations.csv",
+    "cost-sensitivity/summary.json",
+    "tfx-projection/projected-declaration.json",
+    "tfx-projection/projection-map.json",
+    "tfx-projection/certificate.json",
+    "tfx-projection/result.json"
+  ],
+  "commands": [
+    {
+      "step": "tests",
+      "returncode": 0,
+      "child_cpu_seconds": 7.193208,
+      "wall_seconds": 7.205951236000146
+    },
+    {
+      "step": "language-check",
+      "returncode": 0,
+      "child_cpu_seconds": 0.7578680000000002,
+      "wall_seconds": 0.7600740800003223
+    },
+    {
+      "step": "pilot",
+      "returncode": 0,
+      "child_cpu_seconds": 0.7257049999999997,
+      "wall_seconds": 0.7275657509999292
+    },
+    {
+      "step": "cases-00000-06000",
+      "returncode": 0,
+      "child_cpu_seconds": 1.191972999999999,
+      "wall_seconds": 1.1931984550001289
+    },
+    {
+      "step": "cases-06000-12000",
+      "returncode": 0,
+      "child_cpu_seconds": 1.636083000000001,
+      "wall_seconds": 1.6401838530000532
+    },
+    {
+      "step": "cases-12000-18000",
+      "returncode": 0,
+      "child_cpu_seconds": 1.3570619999999998,
+      "wall_seconds": 1.3583532610000475
+    },
+    {
+      "step": "cases-18000-24000",
+      "returncode": 0,
+      "child_cpu_seconds": 1.5392190000000008,
+      "wall_seconds": 1.5433897809998598
+    },
+    {
+      "step": "cases-24000-30000",
+      "returncode": 0,
+      "child_cpu_seconds": 1.529266,
+      "wall_seconds": 1.5326077530003204
+    },
+    {
+      "step": "cases-30000-36000",
+      "returncode": 0,
+      "child_cpu_seconds": 1.216667000000001,
+      "wall_seconds": 1.2180173960000502
+    },
+    {
+      "step": "cases-36000-42000",
+      "returncode": 0,
+      "child_cpu_seconds": 1.247489999999996,
+      "wall_seconds": 1.2488688619996537
+    },
+    {
+      "step": "cases-42000-46932",
+      "returncode": 0,
+      "child_cpu_seconds": 1.3025649999999995,
+      "wall_seconds": 1.3038069399999586
+    },
+    {
+      "step": "counter-family",
+      "returncode": 0,
+      "child_cpu_seconds": 0.7403770000000021,
+      "wall_seconds": 0.7416763249998439
+    },
+    {
+      "step": "portfolio-campaign",
+      "returncode": 0,
+      "child_cpu_seconds": 8.027645000000001,
+      "wall_seconds": 8.03093825399992
+    },
+    {
+      "step": "random-differential",
+      "returncode": 0,
+      "child_cpu_seconds": 0.9038750000000002,
+      "wall_seconds": 0.9053467039998395
+    },
+    {
+      "step": "cost-sensitivity",
+      "returncode": 0,
+      "child_cpu_seconds": 0.8832050000000011,
+      "wall_seconds": 0.8841989090001334
+    },
+    {
+      "step": "tfx-projection",
+      "returncode": 0,
+      "child_cpu_seconds": 0.7702399999999998,
+      "wall_seconds": 0.7713174400000753
+    }
+  ],
+  "workers": 1,
+  "elapsed_seconds": 31.464728750000177,
+  "parent_cpu_seconds": 0.414420091,
+  "children_cpu_seconds": 31.022448,
+  "parent_peak_rss_kib": 101152,
+  "children_peak_rss_kib": 109356,
+  "timings_are_not_expected_to_match": true,
+  "meaning": "reproduction of bounded finite checks, not independent proof, production validation, or external review"
+}

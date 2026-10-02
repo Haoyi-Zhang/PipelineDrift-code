@@ -1,0 +1,197 @@
+{
+  "future_schema": {
+    "fields": {
+      "body_mass_g_present": [
+        false,
+        true
+      ],
+      "culmen_depth_mm_present": [
+        false,
+        true
+      ],
+      "culmen_length_mm_present": [
+        false,
+        true
+      ],
+      "flipper_length_mm_present": [
+        false,
+        true
+      ],
+      "species_present": [
+        false,
+        true
+      ]
+    }
+  },
+  "history_schema": {
+    "fields": {
+      "body_mass_g_present": [
+        false,
+        true
+      ],
+      "culmen_depth_mm_present": [
+        false,
+        true
+      ],
+      "culmen_length_mm_present": [
+        false,
+        true
+      ],
+      "flipper_length_mm_present": [
+        false,
+        true
+      ],
+      "species_present": [
+        false,
+        true
+      ]
+    }
+  },
+  "metadata": {
+    "non_claim": "not a general TFDV protobuf parser, TFX runtime adapter, or production validation",
+    "projection": "only feature presence min_fraction=1.0 and min_count=1; each finite event is a Boolean batch-summary record",
+    "source_commit": "cd99075bfad794a3ea9df49ee77f9c06578f895d",
+    "source_path": "tfx/examples/penguin/schema/user_provided/schema.pbtxt",
+    "source_repository": "tensorflow/tfx"
+  },
+  "monitor_updates": [
+    {
+      "initial": 0,
+      "kind": "seen",
+      "name": "reject-ever-missing-body_mass_g",
+      "predicate": {
+        "args": [
+          {
+            "field": "body_mass_g_present"
+          }
+        ],
+        "op": "not"
+      }
+    },
+    {
+      "initial": 0,
+      "kind": "seen",
+      "name": "reject-ever-missing-culmen_depth_mm",
+      "predicate": {
+        "args": [
+          {
+            "field": "culmen_depth_mm_present"
+          }
+        ],
+        "op": "not"
+      }
+    },
+    {
+      "initial": 0,
+      "kind": "seen",
+      "name": "reject-ever-missing-culmen_length_mm",
+      "predicate": {
+        "args": [
+          {
+            "field": "culmen_length_mm_present"
+          }
+        ],
+        "op": "not"
+      }
+    },
+    {
+      "initial": 0,
+      "kind": "seen",
+      "name": "reject-ever-missing-flipper_length_mm",
+      "predicate": {
+        "args": [
+          {
+            "field": "flipper_length_mm_present"
+          }
+        ],
+        "op": "not"
+      }
+    },
+    {
+      "initial": 0,
+      "kind": "seen",
+      "name": "reject-ever-missing-species",
+      "predicate": {
+        "args": [
+          {
+            "field": "species_present"
+          }
+        ],
+        "op": "not"
+      }
+    }
+  ],
+  "name": "tfx-penguin-required-presence-projection",
+  "retention_atoms": [
+    {
+      "cost": 1,
+      "initial": 0,
+      "kind": "seen",
+      "name": "ever-missing-body_mass_g",
+      "predicate": {
+        "args": [
+          {
+            "field": "body_mass_g_present"
+          }
+        ],
+        "op": "not"
+      }
+    },
+    {
+      "cost": 1,
+      "initial": 0,
+      "kind": "seen",
+      "name": "ever-missing-culmen_depth_mm",
+      "predicate": {
+        "args": [
+          {
+            "field": "culmen_depth_mm_present"
+          }
+        ],
+        "op": "not"
+      }
+    },
+    {
+      "cost": 1,
+      "initial": 0,
+      "kind": "seen",
+      "name": "ever-missing-culmen_length_mm",
+      "predicate": {
+        "args": [
+          {
+            "field": "culmen_length_mm_present"
+          }
+        ],
+        "op": "not"
+      }
+    },
+    {
+      "cost": 1,
+      "initial": 0,
+      "kind": "seen",
+      "name": "ever-missing-flipper_length_mm",
+      "predicate": {
+        "args": [
+          {
+            "field": "flipper_length_mm_present"
+          }
+        ],
+        "op": "not"
+      }
+    },
+    {
+      "cost": 1,
+      "initial": 0,
+      "kind": "seen",
+      "name": "ever-missing-species",
+      "predicate": {
+        "args": [
+          {
+            "field": "species_present"
+          }
+        ],
+        "op": "not"
+      }
+    }
+  ]
+}

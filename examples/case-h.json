@@ -1,0 +1,73 @@
+{
+  "case": "case-h",
+  "description": "An exact migration exists, but resetting every migrated state to the initial state is incorrect.",
+  "input_cells": [
+    "normal",
+    "low"
+  ],
+  "motivation_source": "Carwehl et al., Section III-E (state continuity motivation)",
+  "provenance": "Original constructed finite example; not an upstream bug or workload.",
+  "expected_admissible": true,
+  "contract": {
+    "retain": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "history": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "future": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "output": [
+      0,
+      0,
+      1
+    ],
+    "initial_retain": 0,
+    "initial_target": 0
+  },
+  "deliberately_incorrect_reset_map": [
+    0,
+    0,
+    0
+  ],
+  "reset_counterexample_history": [
+    1
+  ],
+  "reset_counterexample_suffix": [
+    1
+  ]
+}

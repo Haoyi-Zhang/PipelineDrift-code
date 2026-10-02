@@ -1,0 +1,125 @@
+{
+  "name": "field-deletion",
+  "metadata": {
+    "motivation": "A historical debug flag disappears; the future severity field continues the same capped incident monitor."
+  },
+  "history_schema": {
+    "fields": {
+      "debug": [
+        false,
+        true
+      ],
+      "severity": [
+        "low",
+        "high"
+      ]
+    }
+  },
+  "future_schema": {
+    "fields": {
+      "severity": [
+        "low",
+        "high"
+      ]
+    }
+  },
+  "retention_atoms": [
+    {
+      "name": "debug-or-high-count-2",
+      "kind": "count",
+      "cap": 2,
+      "predicate": {
+        "op": "or",
+        "args": [
+          {
+            "field": "debug"
+          },
+          {
+            "op": "eq",
+            "args": [
+              {
+                "field": "severity"
+              },
+              {
+                "const": "high"
+              }
+            ]
+          }
+        ]
+      },
+      "initial": 0
+    },
+    {
+      "name": "debug-count-2",
+      "kind": "count",
+      "cap": 2,
+      "predicate": {
+        "field": "debug"
+      },
+      "initial": 0
+    },
+    {
+      "name": "high-count-2",
+      "kind": "count",
+      "cap": 2,
+      "predicate": {
+        "op": "eq",
+        "args": [
+          {
+            "field": "severity"
+          },
+          {
+            "const": "high"
+          }
+        ]
+      },
+      "initial": 0
+    },
+    {
+      "name": "ever-debug",
+      "kind": "seen",
+      "predicate": {
+        "field": "debug"
+      },
+      "initial": 0
+    }
+  ],
+  "monitor_updates": [
+    {
+      "name": "two-incidents",
+      "kind": "count_threshold",
+      "threshold": 2,
+      "history_predicate": {
+        "op": "or",
+        "args": [
+          {
+            "field": "debug"
+          },
+          {
+            "op": "eq",
+            "args": [
+              {
+                "field": "severity"
+              },
+              {
+                "const": "high"
+              }
+            ]
+          }
+        ]
+      },
+      "future_predicate": {
+        "op": "eq",
+        "args": [
+          {
+            "field": "severity"
+          },
+          {
+            "const": "high"
+          }
+        ]
+      },
+      "initial": 0
+    }
+  ]
+}

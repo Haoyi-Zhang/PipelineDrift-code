@@ -1,0 +1,66 @@
+{
+  "case": "case-g",
+  "description": "A more detailed retained counter supports the lower-threshold replay target.",
+  "input_cells": [
+    "normal",
+    "low"
+  ],
+  "motivation_source": "Constructed bounded temporal drift predicate",
+  "provenance": "Original constructed finite example; not an upstream bug or workload.",
+  "expected_admissible": true,
+  "contract": {
+    "retain": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "history": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "future": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "output": [
+      0,
+      0,
+      1
+    ],
+    "initial_retain": 0,
+    "initial_target": 0
+  }
+}

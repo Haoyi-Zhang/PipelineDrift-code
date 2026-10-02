@@ -1,0 +1,160 @@
+{
+  "scope": "complete predeclared finite table space, not a workload sample",
+  "totals": {
+    "cases": 46932,
+    "admissible": 29708,
+    "inadmissible": 17224,
+    "type_only_false_accept": 17224,
+    "current_only_false_accept": 1296,
+    "current_only_false_reject": 0,
+    "state_equality_false_accept": 0,
+    "state_equality_false_reject": 12040
+  },
+  "strata": [
+    {
+      "alphabet": 1,
+      "retained_states": 1,
+      "target_states": 1,
+      "cases": 2,
+      "admissible": 2,
+      "inadmissible": 0,
+      "type_only_false_accept": 0,
+      "current_only_false_accept": 0,
+      "current_only_false_reject": 0,
+      "state_equality_false_accept": 0,
+      "state_equality_false_reject": 0
+    },
+    {
+      "alphabet": 1,
+      "retained_states": 1,
+      "target_states": 2,
+      "cases": 64,
+      "admissible": 48,
+      "inadmissible": 16,
+      "type_only_false_accept": 16,
+      "current_only_false_accept": 0,
+      "current_only_false_reject": 0,
+      "state_equality_false_accept": 0,
+      "state_equality_false_reject": 16
+    },
+    {
+      "alphabet": 1,
+      "retained_states": 1,
+      "target_states": 3,
+      "cases": 5832,
+      "admissible": 3276,
+      "inadmissible": 2556,
+      "type_only_false_accept": 2556,
+      "current_only_false_accept": 288,
+      "current_only_false_reject": 0,
+      "state_equality_false_accept": 0,
+      "state_equality_false_reject": 1332
+    },
+    {
+      "alphabet": 1,
+      "retained_states": 2,
+      "target_states": 1,
+      "cases": 8,
+      "admissible": 8,
+      "inadmissible": 0,
+      "type_only_false_accept": 0,
+      "current_only_false_accept": 0,
+      "current_only_false_reject": 0,
+      "state_equality_false_accept": 0,
+      "state_equality_false_reject": 0
+    },
+    {
+      "alphabet": 1,
+      "retained_states": 2,
+      "target_states": 2,
+      "cases": 256,
+      "admissible": 208,
+      "inadmissible": 48,
+      "type_only_false_accept": 48,
+      "current_only_false_accept": 0,
+      "current_only_false_reject": 0,
+      "state_equality_false_accept": 0,
+      "state_equality_false_reject": 48
+    },
+    {
+      "alphabet": 1,
+      "retained_states": 2,
+      "target_states": 3,
+      "cases": 23328,
+      "admissible": 14868,
+      "inadmissible": 8460,
+      "type_only_false_accept": 8460,
+      "current_only_false_accept": 1008,
+      "current_only_false_reject": 0,
+      "state_equality_false_accept": 0,
+      "state_equality_false_reject": 4500
+    },
+    {
+      "alphabet": 2,
+      "retained_states": 1,
+      "target_states": 1,
+      "cases": 2,
+      "admissible": 2,
+      "inadmissible": 0,
+      "type_only_false_accept": 0,
+      "current_only_false_accept": 0,
+      "current_only_false_reject": 0,
+      "state_equality_false_accept": 0,
+      "state_equality_false_reject": 0
+    },
+    {
+      "alphabet": 2,
+      "retained_states": 1,
+      "target_states": 2,
+      "cases": 1024,
+      "admissible": 640,
+      "inadmissible": 384,
+      "type_only_false_accept": 384,
+      "current_only_false_accept": 0,
+      "current_only_false_reject": 0,
+      "state_equality_false_accept": 0,
+      "state_equality_false_reject": 384
+    },
+    {
+      "alphabet": 2,
+      "retained_states": 2,
+      "target_states": 1,
+      "cases": 32,
+      "admissible": 32,
+      "inadmissible": 0,
+      "type_only_false_accept": 0,
+      "current_only_false_accept": 0,
+      "current_only_false_reject": 0,
+      "state_equality_false_accept": 0,
+      "state_equality_false_reject": 0
+    },
+    {
+      "alphabet": 2,
+      "retained_states": 2,
+      "target_states": 2,
+      "cases": 16384,
+      "admissible": 10624,
+      "inadmissible": 5760,
+      "type_only_false_accept": 5760,
+      "current_only_false_accept": 0,
+      "current_only_false_reject": 0,
+      "state_equality_false_accept": 0,
+      "state_equality_false_reject": 5760
+    }
+  ],
+  "minimum_cost_distribution": {
+    "1": 9848,
+    "2": 4836,
+    "3": 2072,
+    "4": 468
+  },
+  "measurements": {
+    "chunks": 8,
+    "summed_inner_cpu_seconds": 2.5773526220000003,
+    "summed_inner_elapsed_seconds": 2.5961828460000334,
+    "max_process_peak_rss_kib": 93992,
+    "timed_out_chunks": 0
+  },
+  "oracle_disagreements": 0,
+  "invalid_certificates": 0
+}

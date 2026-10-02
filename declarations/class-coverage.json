@@ -1,0 +1,122 @@
+{
+  "name": "class-coverage",
+  "metadata": {
+    "motivation": "A joint bitset competes with separate per-class flags across several planned updates."
+  },
+  "history_schema": {
+    "fields": {
+      "class": [
+        "cat",
+        "dog",
+        "bird"
+      ]
+    }
+  },
+  "future_schema": {
+    "fields": {
+      "class": [
+        "cat",
+        "dog",
+        "bird"
+      ]
+    }
+  },
+  "retention_atoms": [
+    {
+      "name": "seen-class-bitset",
+      "kind": "bitset",
+      "value": {
+        "field": "class"
+      },
+      "values": [
+        "cat",
+        "dog",
+        "bird"
+      ],
+      "initial": 0
+    },
+    {
+      "name": "seen-cat",
+      "kind": "seen",
+      "predicate": {
+        "op": "eq",
+        "args": [
+          {
+            "field": "class"
+          },
+          {
+            "const": "cat"
+          }
+        ]
+      },
+      "initial": 0
+    },
+    {
+      "name": "seen-dog",
+      "kind": "seen",
+      "predicate": {
+        "op": "eq",
+        "args": [
+          {
+            "field": "class"
+          },
+          {
+            "const": "dog"
+          }
+        ]
+      },
+      "initial": 0
+    },
+    {
+      "name": "seen-bird",
+      "kind": "seen",
+      "predicate": {
+        "op": "eq",
+        "args": [
+          {
+            "field": "class"
+          },
+          {
+            "const": "bird"
+          }
+        ]
+      },
+      "initial": 0
+    }
+  ],
+  "monitor_updates": [
+    {
+      "name": "cat-and-dog-covered",
+      "kind": "bitset_all",
+      "value": {
+        "field": "class"
+      },
+      "values": [
+        "cat",
+        "dog",
+        "bird"
+      ],
+      "required": [
+        "cat",
+        "dog"
+      ],
+      "initial": 0
+    },
+    {
+      "name": "bird-covered",
+      "kind": "bitset_any",
+      "value": {
+        "field": "class"
+      },
+      "values": [
+        "cat",
+        "dog",
+        "bird"
+      ],
+      "required": [
+        "bird"
+      ],
+      "initial": 0
+    }
+  ]
+}

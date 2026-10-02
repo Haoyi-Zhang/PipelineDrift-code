@@ -1,0 +1,11 @@
+{
+  "cases": 48,
+  "admissible": 21,
+  "inadmissible": 27,
+  "disagreements": 0,
+  "cpu_seconds": 0.0009101009999999965,
+  "elapsed_seconds": 0.0025680179999199026,
+  "peak_rss_kib": 92844,
+  "workers": 1,
+  "timed_out": false
+}

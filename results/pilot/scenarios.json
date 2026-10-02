@@ -1,0 +1,323 @@
+[
+  {
+    "case": "case-a",
+    "expected": true,
+    "answer": {
+      "admissible": true,
+      "reachable_pairs": 3,
+      "current_only_admissible": true,
+      "state_equality_admissible": true,
+      "certificate": {
+        "kind": "migration",
+        "map": [
+          0,
+          1,
+          2
+        ],
+        "reachable": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "future_relation": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      }
+    },
+    "certificate_valid": true,
+    "matches_expected": true
+  },
+  {
+    "case": "case-b",
+    "expected": false,
+    "answer": {
+      "admissible": false,
+      "reachable_pairs": 3,
+      "current_only_admissible": false,
+      "state_equality_admissible": false,
+      "certificate": {
+        "kind": "collision",
+        "history_left": [
+          0
+        ],
+        "history_right": [
+          1
+        ],
+        "suffix": [],
+        "retained_state": 1,
+        "target_left": 0,
+        "target_right": 1,
+        "cost": 2
+      }
+    },
+    "certificate_valid": true,
+    "matches_expected": true
+  },
+  {
+    "case": "case-c",
+    "expected": false,
+    "answer": {
+      "admissible": false,
+      "reachable_pairs": 3,
+      "current_only_admissible": false,
+      "state_equality_admissible": false,
+      "certificate": {
+        "kind": "collision",
+        "history_left": [
+          0
+        ],
+        "history_right": [
+          1
+        ],
+        "suffix": [],
+        "retained_state": 1,
+        "target_left": 0,
+        "target_right": 1,
+        "cost": 2
+      }
+    },
+    "certificate_valid": true,
+    "matches_expected": true
+  },
+  {
+    "case": "case-d",
+    "expected": false,
+    "answer": {
+      "admissible": false,
+      "reachable_pairs": 3,
+      "current_only_admissible": true,
+      "state_equality_admissible": false,
+      "certificate": {
+        "kind": "collision",
+        "history_left": [
+          0
+        ],
+        "history_right": [
+          1
+        ],
+        "suffix": [
+          0
+        ],
+        "retained_state": 1,
+        "target_left": 0,
+        "target_right": 1,
+        "cost": 3
+      }
+    },
+    "certificate_valid": true,
+    "matches_expected": true
+  },
+  {
+    "case": "case-e",
+    "expected": true,
+    "answer": {
+      "admissible": true,
+      "reachable_pairs": 3,
+      "current_only_admissible": true,
+      "state_equality_admissible": false,
+      "certificate": {
+        "kind": "migration",
+        "map": [
+          0,
+          0
+        ],
+        "reachable": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "future_relation": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      }
+    },
+    "certificate_valid": true,
+    "matches_expected": true
+  },
+  {
+    "case": "case-f",
+    "expected": false,
+    "answer": {
+      "admissible": false,
+      "reachable_pairs": 4,
+      "current_only_admissible": false,
+      "state_equality_admissible": false,
+      "certificate": {
+        "kind": "collision",
+        "history_left": [
+          1,
+          1
+        ],
+        "history_right": [
+          1,
+          1,
+          1
+        ],
+        "suffix": [],
+        "retained_state": 2,
+        "target_left": 2,
+        "target_right": 3,
+        "cost": 5
+      }
+    },
+    "certificate_valid": true,
+    "matches_expected": true
+  },
+  {
+    "case": "case-g",
+    "expected": true,
+    "answer": {
+      "admissible": true,
+      "reachable_pairs": 4,
+      "current_only_admissible": true,
+      "state_equality_admissible": true,
+      "certificate": {
+        "kind": "migration",
+        "map": [
+          0,
+          1,
+          2,
+          2
+        ],
+        "reachable": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "future_relation": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      }
+    },
+    "certificate_valid": true,
+    "matches_expected": true
+  },
+  {
+    "case": "case-h",
+    "expected": true,
+    "answer": {
+      "admissible": true,
+      "reachable_pairs": 3,
+      "current_only_admissible": true,
+      "state_equality_admissible": true,
+      "certificate": {
+        "kind": "migration",
+        "map": [
+          0,
+          1,
+          2
+        ],
+        "reachable": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "future_relation": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      }
+    },
+    "certificate_valid": true,
+    "matches_expected": true
+  }
+]

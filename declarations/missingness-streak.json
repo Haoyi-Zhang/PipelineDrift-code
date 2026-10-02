@@ -1,0 +1,84 @@
+{
+  "name": "missingness-streak",
+  "metadata": {
+    "motivation": "A schema rename changes the predicate syntax but not the intended temporal state."
+  },
+  "history_schema": {
+    "fields": {
+      "missing": [
+        false,
+        true
+      ]
+    }
+  },
+  "future_schema": {
+    "fields": {
+      "is_null": [
+        false,
+        true
+      ]
+    }
+  },
+  "retention_atoms": [
+    {
+      "name": "ever-missing",
+      "kind": "seen",
+      "predicate": {
+        "field": "missing"
+      },
+      "initial": 0
+    },
+    {
+      "name": "missing-run-2",
+      "kind": "run",
+      "cap": 2,
+      "predicate": {
+        "field": "missing"
+      },
+      "initial": 0
+    },
+    {
+      "name": "missing-count-2",
+      "kind": "count",
+      "cap": 2,
+      "predicate": {
+        "field": "missing"
+      },
+      "initial": 0
+    },
+    {
+      "name": "last-two-missing",
+      "kind": "window",
+      "width": 2,
+      "predicate": {
+        "field": "missing"
+      },
+      "initial": 0
+    }
+  ],
+  "monitor_updates": [
+    {
+      "name": "ever-null",
+      "kind": "seen",
+      "history_predicate": {
+        "field": "missing"
+      },
+      "future_predicate": {
+        "field": "is_null"
+      },
+      "initial": 0
+    },
+    {
+      "name": "two-null-streak",
+      "kind": "run_threshold",
+      "threshold": 2,
+      "history_predicate": {
+        "field": "missing"
+      },
+      "future_predicate": {
+        "field": "is_null"
+      },
+      "initial": 0
+    }
+  ]
+}

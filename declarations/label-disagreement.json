@@ -1,0 +1,174 @@
+{
+  "name": "label-disagreement",
+  "metadata": {
+    "motivation": "Label-function marginals do not determine joint disagreement or the last joint outcome."
+  },
+  "history_schema": {
+    "fields": {
+      "weak_a": [
+        false,
+        true
+      ],
+      "weak_b": [
+        false,
+        true
+      ]
+    }
+  },
+  "future_schema": {
+    "fields": {
+      "weak_a": [
+        false,
+        true
+      ],
+      "weak_b": [
+        false,
+        true
+      ]
+    }
+  },
+  "retention_atoms": [
+    {
+      "name": "disagreement-count-2",
+      "kind": "count",
+      "cap": 2,
+      "predicate": {
+        "op": "ne",
+        "args": [
+          {
+            "field": "weak_a"
+          },
+          {
+            "field": "weak_b"
+          }
+        ]
+      },
+      "initial": 0
+    },
+    {
+      "name": "ever-disagreement",
+      "kind": "seen",
+      "predicate": {
+        "op": "ne",
+        "args": [
+          {
+            "field": "weak_a"
+          },
+          {
+            "field": "weak_b"
+          }
+        ]
+      },
+      "initial": 0
+    },
+    {
+      "name": "last-joint-label",
+      "kind": "last",
+      "value": {
+        "op": "tuple",
+        "args": [
+          {
+            "field": "weak_a"
+          },
+          {
+            "field": "weak_b"
+          }
+        ]
+      },
+      "values": [
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          true,
+          false
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      "initial": 0
+    },
+    {
+      "name": "a-positive-count-2",
+      "kind": "count",
+      "cap": 2,
+      "predicate": {
+        "field": "weak_a"
+      },
+      "initial": 0
+    },
+    {
+      "name": "b-positive-count-2",
+      "kind": "count",
+      "cap": 2,
+      "predicate": {
+        "field": "weak_b"
+      },
+      "initial": 0
+    }
+  ],
+  "monitor_updates": [
+    {
+      "name": "two-disagreements",
+      "kind": "count_threshold",
+      "threshold": 2,
+      "predicate": {
+        "op": "ne",
+        "args": [
+          {
+            "field": "weak_a"
+          },
+          {
+            "field": "weak_b"
+          }
+        ]
+      },
+      "initial": 0
+    },
+    {
+      "name": "last-both-positive",
+      "kind": "last_equals",
+      "value": {
+        "op": "tuple",
+        "args": [
+          {
+            "field": "weak_a"
+          },
+          {
+            "field": "weak_b"
+          }
+        ]
+      },
+      "values": [
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          true,
+          false
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      "target": [
+        true,
+        true
+      ],
+      "initial": 0
+    }
+  ]
+}

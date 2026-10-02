@@ -1,0 +1,25 @@
+{
+  "certificate_valid": true,
+  "feasible": true,
+  "features_projected": 5,
+  "future_records": 32,
+  "history_records": 32,
+  "independently_safe": true,
+  "language_empty_histories_checked": 10,
+  "language_initial_states_checked": 10,
+  "monitor_updates": 5,
+  "retention_atoms": 5,
+  "scope": "narrow pinned public-schema projection; not full TFDV or TFX compatibility",
+  "selected_atoms": [
+    "ever-missing-body_mass_g",
+    "ever-missing-culmen_depth_mm",
+    "ever-missing-culmen_length_mm",
+    "ever-missing-flipper_length_mm",
+    "ever-missing-species"
+  ],
+  "selected_cost": 5,
+  "selected_mask": 31,
+  "source_commit": "cd99075bfad794a3ea9df49ee77f9c06578f895d",
+  "source_sha256": "09b4f7acd87714122154dceb215ccd5393f1fab14ba5beda1da4477ed339722a",
+  "status": "pass"
+}

@@ -1,0 +1,58 @@
+{
+  "case": "case-e",
+  "description": "Distinct replay states with identical future behavior need not be stored separately.",
+  "input_cells": [
+    "cell zero",
+    "cell one"
+  ],
+  "motivation_source": "Constructed state-equality negative control",
+  "provenance": "Original constructed finite example; not an upstream bug or workload.",
+  "expected_admissible": true,
+  "contract": {
+    "retain": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "history": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "future": [
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "output": [
+      0,
+      0,
+      1
+    ],
+    "initial_retain": 0,
+    "initial_target": 0
+  }
+}

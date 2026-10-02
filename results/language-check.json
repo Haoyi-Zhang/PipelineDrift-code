@@ -1,0 +1,162 @@
+{
+  "declarations": [
+    {
+      "empty_histories_checked": 6,
+      "future_records": 3,
+      "history_records": 3,
+      "initial_states_checked": 6,
+      "monitor_output_cells": 16,
+      "monitor_transition_cells": 96,
+      "monitor_updates": 2,
+      "name": "class-coverage",
+      "retention_atoms": 4,
+      "retention_transition_cells": 42
+    },
+    {
+      "empty_histories_checked": 5,
+      "future_records": 2,
+      "history_records": 4,
+      "initial_states_checked": 5,
+      "monitor_output_cells": 3,
+      "monitor_transition_cells": 18,
+      "monitor_updates": 1,
+      "name": "field-deletion",
+      "retention_atoms": 4,
+      "retention_transition_cells": 44
+    },
+    {
+      "empty_histories_checked": 5,
+      "future_records": 4,
+      "history_records": 4,
+      "initial_states_checked": 5,
+      "monitor_output_cells": 3,
+      "monitor_transition_cells": 24,
+      "monitor_updates": 1,
+      "name": "joint-marginals",
+      "retention_atoms": 4,
+      "retention_transition_cells": 48
+    },
+    {
+      "empty_histories_checked": 7,
+      "future_records": 4,
+      "history_records": 4,
+      "initial_states_checked": 7,
+      "monitor_output_cells": 8,
+      "monitor_transition_cells": 64,
+      "monitor_updates": 2,
+      "name": "label-disagreement",
+      "retention_atoms": 5,
+      "retention_transition_cells": 64
+    },
+    {
+      "empty_histories_checked": 5,
+      "future_records": 2,
+      "history_records": 2,
+      "initial_states_checked": 5,
+      "monitor_output_cells": 6,
+      "monitor_transition_cells": 24,
+      "monitor_updates": 2,
+      "name": "label-field-rename",
+      "retention_atoms": 3,
+      "retention_transition_cells": 30
+    },
+    {
+      "empty_histories_checked": 4,
+      "future_records": 4,
+      "history_records": 4,
+      "initial_states_checked": 4,
+      "monitor_output_cells": 3,
+      "monitor_transition_cells": 24,
+      "monitor_updates": 1,
+      "name": "marginals-only-infeasible",
+      "retention_atoms": 3,
+      "retention_transition_cells": 36
+    },
+    {
+      "empty_histories_checked": 6,
+      "future_records": 2,
+      "history_records": 2,
+      "initial_states_checked": 6,
+      "monitor_output_cells": 5,
+      "monitor_transition_cells": 20,
+      "monitor_updates": 2,
+      "name": "missingness-streak",
+      "retention_atoms": 4,
+      "retention_transition_cells": 30
+    },
+    {
+      "empty_histories_checked": 6,
+      "future_records": 2,
+      "history_records": 2,
+      "initial_states_checked": 6,
+      "monitor_output_cells": 18,
+      "monitor_transition_cells": 72,
+      "monitor_updates": 2,
+      "name": "rolling-pattern",
+      "retention_atoms": 4,
+      "retention_transition_cells": 54
+    },
+    {
+      "empty_histories_checked": 6,
+      "future_records": 2,
+      "history_records": 2,
+      "initial_states_checked": 6,
+      "monitor_output_cells": 6,
+      "monitor_transition_cells": 24,
+      "monitor_updates": 2,
+      "name": "schema-rename-status",
+      "retention_atoms": 4,
+      "retention_transition_cells": 34
+    },
+    {
+      "empty_histories_checked": 7,
+      "future_records": 4,
+      "history_records": 4,
+      "initial_states_checked": 7,
+      "monitor_output_cells": 7,
+      "monitor_transition_cells": 56,
+      "monitor_updates": 3,
+      "name": "slice-regression",
+      "retention_atoms": 4,
+      "retention_transition_cells": 92
+    },
+    {
+      "empty_histories_checked": 7,
+      "future_records": 2,
+      "history_records": 2,
+      "initial_states_checked": 7,
+      "monitor_output_cells": 9,
+      "monitor_transition_cells": 36,
+      "monitor_updates": 3,
+      "name": "threshold-family",
+      "retention_atoms": 4,
+      "retention_transition_cells": 24
+    },
+    {
+      "empty_histories_checked": 9,
+      "future_records": 3,
+      "history_records": 3,
+      "initial_states_checked": 9,
+      "monitor_output_cells": 8,
+      "monitor_transition_cells": 48,
+      "monitor_updates": 4,
+      "name": "weighted-greedy-trap",
+      "retention_atoms": 5,
+      "retention_transition_cells": 30
+    }
+  ],
+  "scope": "the 12 shipped bounded declarations; not an external pipeline implementation",
+  "status": "all extensional compiler cells, explicit initials, and empty histories match the independent reference semantics",
+  "totals": {
+    "declarations": 12,
+    "empty_histories_checked": 73,
+    "future_records": 34,
+    "history_records": 36,
+    "initial_states_checked": 73,
+    "monitor_output_cells": 92,
+    "monitor_transition_cells": 506,
+    "monitor_updates": 25,
+    "retention_atoms": 48,
+    "retention_transition_cells": 528
+  }
+}

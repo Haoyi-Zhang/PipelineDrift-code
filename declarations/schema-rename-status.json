@@ -1,0 +1,128 @@
+{
+  "name": "schema-rename-status",
+  "metadata": {
+    "motivation": "A categorical field is renamed while count and last-value monitors continue."
+  },
+  "history_schema": {
+    "fields": {
+      "status": [
+        "ok",
+        "bad"
+      ]
+    }
+  },
+  "future_schema": {
+    "fields": {
+      "quality": [
+        "ok",
+        "bad"
+      ]
+    }
+  },
+  "retention_atoms": [
+    {
+      "name": "bad-count-2",
+      "kind": "count",
+      "cap": 2,
+      "predicate": {
+        "op": "eq",
+        "args": [
+          {
+            "field": "status"
+          },
+          {
+            "const": "bad"
+          }
+        ]
+      },
+      "initial": 0
+    },
+    {
+      "name": "last-status",
+      "kind": "last",
+      "value": {
+        "field": "status"
+      },
+      "values": [
+        "ok",
+        "bad"
+      ],
+      "initial": 0
+    },
+    {
+      "name": "status-histogram-2",
+      "kind": "histogram",
+      "cap": 2,
+      "value": {
+        "field": "status"
+      },
+      "values": [
+        "ok",
+        "bad"
+      ],
+      "initial": 0
+    },
+    {
+      "name": "ever-bad",
+      "kind": "seen",
+      "predicate": {
+        "op": "eq",
+        "args": [
+          {
+            "field": "status"
+          },
+          {
+            "const": "bad"
+          }
+        ]
+      },
+      "initial": 0
+    }
+  ],
+  "monitor_updates": [
+    {
+      "name": "two-bad",
+      "kind": "count_threshold",
+      "threshold": 2,
+      "history_predicate": {
+        "op": "eq",
+        "args": [
+          {
+            "field": "status"
+          },
+          {
+            "const": "bad"
+          }
+        ]
+      },
+      "future_predicate": {
+        "op": "eq",
+        "args": [
+          {
+            "field": "quality"
+          },
+          {
+            "const": "bad"
+          }
+        ]
+      },
+      "initial": 0
+    },
+    {
+      "name": "last-bad",
+      "kind": "last_equals",
+      "history_value": {
+        "field": "status"
+      },
+      "future_value": {
+        "field": "quality"
+      },
+      "values": [
+        "ok",
+        "bad"
+      ],
+      "target": "bad",
+      "initial": 0
+    }
+  ]
+}

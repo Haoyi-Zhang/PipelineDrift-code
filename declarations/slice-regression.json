@@ -1,0 +1,220 @@
+{
+  "name": "slice-regression",
+  "metadata": {
+    "motivation": "Slice-specific alerts and a global threshold compete for retained summary bits."
+  },
+  "history_schema": {
+    "fields": {
+      "region": [
+        "A",
+        "B"
+      ],
+      "error": [
+        false,
+        true
+      ]
+    }
+  },
+  "future_schema": {
+    "fields": {
+      "area": [
+        "A",
+        "B"
+      ],
+      "error": [
+        false,
+        true
+      ]
+    }
+  },
+  "retention_atoms": [
+    {
+      "name": "seen-error-region-pairs",
+      "kind": "bitset",
+      "value": {
+        "op": "tuple",
+        "args": [
+          {
+            "field": "error"
+          },
+          {
+            "field": "region"
+          }
+        ]
+      },
+      "values": [
+        [
+          false,
+          "A"
+        ],
+        [
+          false,
+          "B"
+        ],
+        [
+          true,
+          "A"
+        ],
+        [
+          true,
+          "B"
+        ]
+      ],
+      "initial": 0
+    },
+    {
+      "name": "seen-error-A",
+      "kind": "seen",
+      "predicate": {
+        "op": "and",
+        "args": [
+          {
+            "field": "error"
+          },
+          {
+            "op": "eq",
+            "args": [
+              {
+                "field": "region"
+              },
+              {
+                "const": "A"
+              }
+            ]
+          }
+        ]
+      },
+      "initial": 0
+    },
+    {
+      "name": "seen-error-B",
+      "kind": "seen",
+      "predicate": {
+        "op": "and",
+        "args": [
+          {
+            "field": "error"
+          },
+          {
+            "op": "eq",
+            "args": [
+              {
+                "field": "region"
+              },
+              {
+                "const": "B"
+              }
+            ]
+          }
+        ]
+      },
+      "initial": 0
+    },
+    {
+      "name": "global-error-count-2",
+      "kind": "count",
+      "cap": 2,
+      "predicate": {
+        "field": "error"
+      },
+      "initial": 0
+    }
+  ],
+  "monitor_updates": [
+    {
+      "name": "error-in-A",
+      "kind": "seen",
+      "history_predicate": {
+        "op": "and",
+        "args": [
+          {
+            "field": "error"
+          },
+          {
+            "op": "eq",
+            "args": [
+              {
+                "field": "region"
+              },
+              {
+                "const": "A"
+              }
+            ]
+          }
+        ]
+      },
+      "future_predicate": {
+        "op": "and",
+        "args": [
+          {
+            "field": "error"
+          },
+          {
+            "op": "eq",
+            "args": [
+              {
+                "field": "area"
+              },
+              {
+                "const": "A"
+              }
+            ]
+          }
+        ]
+      },
+      "initial": 0
+    },
+    {
+      "name": "error-in-B",
+      "kind": "seen",
+      "history_predicate": {
+        "op": "and",
+        "args": [
+          {
+            "field": "error"
+          },
+          {
+            "op": "eq",
+            "args": [
+              {
+                "field": "region"
+              },
+              {
+                "const": "B"
+              }
+            ]
+          }
+        ]
+      },
+      "future_predicate": {
+        "op": "and",
+        "args": [
+          {
+            "field": "error"
+          },
+          {
+            "op": "eq",
+            "args": [
+              {
+                "field": "area"
+              },
+              {
+                "const": "B"
+              }
+            ]
+          }
+        ]
+      },
+      "initial": 0
+    },
+    {
+      "name": "two-errors",
+      "kind": "count_threshold",
+      "threshold": 2,
+      "predicate": {
+        "field": "error"
+      },
+      "initial": 0
+    }
+  ]
+}

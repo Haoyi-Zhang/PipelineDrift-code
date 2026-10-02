@@ -1,0 +1,89 @@
+{
+  "name": "rolling-pattern",
+  "metadata": {
+    "motivation": "A longer rolling window can subsume a shorter streak summary."
+  },
+  "history_schema": {
+    "fields": {
+      "alarm": [
+        false,
+        true
+      ]
+    }
+  },
+  "future_schema": {
+    "fields": {
+      "alert": [
+        false,
+        true
+      ]
+    }
+  },
+  "retention_atoms": [
+    {
+      "name": "last-three-alarms",
+      "kind": "window",
+      "width": 3,
+      "predicate": {
+        "field": "alarm"
+      },
+      "initial": 0
+    },
+    {
+      "name": "last-two-alarms",
+      "kind": "window",
+      "width": 2,
+      "predicate": {
+        "field": "alarm"
+      },
+      "initial": 0
+    },
+    {
+      "name": "alarm-run-2",
+      "kind": "run",
+      "cap": 2,
+      "predicate": {
+        "field": "alarm"
+      },
+      "initial": 0
+    },
+    {
+      "name": "ever-alarm",
+      "kind": "seen",
+      "predicate": {
+        "field": "alarm"
+      },
+      "initial": 0
+    }
+  ],
+  "monitor_updates": [
+    {
+      "name": "true-false-true",
+      "kind": "window_pattern",
+      "pattern": [
+        true,
+        false,
+        true
+      ],
+      "history_predicate": {
+        "field": "alarm"
+      },
+      "future_predicate": {
+        "field": "alert"
+      },
+      "initial": 0
+    },
+    {
+      "name": "two-alert-streak",
+      "kind": "run_threshold",
+      "threshold": 2,
+      "history_predicate": {
+        "field": "alarm"
+      },
+      "future_predicate": {
+        "field": "alert"
+      },
+      "initial": 0
+    }
+  ]
+}

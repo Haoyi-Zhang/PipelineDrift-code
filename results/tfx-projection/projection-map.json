@@ -1,0 +1,68 @@
+{
+  "event_abstraction": "one Boolean field per source feature records whether that feature is present in a finite batch summary",
+  "excluded_semantics": [
+    "general protobuf fields and environments",
+    "numeric distribution drift or skew",
+    "streaming execution and orchestration",
+    "model training, inference, deployment, or production costs"
+  ],
+  "features": [
+    {
+      "event_field": "body_mass_g_present",
+      "min_count": 1,
+      "min_fraction": 1.0,
+      "monitor_update": "reject-ever-missing-body_mass_g",
+      "name": "body_mass_g",
+      "retention_atom": "ever-missing-body_mass_g",
+      "type": "FLOAT"
+    },
+    {
+      "event_field": "culmen_depth_mm_present",
+      "min_count": 1,
+      "min_fraction": 1.0,
+      "monitor_update": "reject-ever-missing-culmen_depth_mm",
+      "name": "culmen_depth_mm",
+      "retention_atom": "ever-missing-culmen_depth_mm",
+      "type": "FLOAT"
+    },
+    {
+      "event_field": "culmen_length_mm_present",
+      "min_count": 1,
+      "min_fraction": 1.0,
+      "monitor_update": "reject-ever-missing-culmen_length_mm",
+      "name": "culmen_length_mm",
+      "retention_atom": "ever-missing-culmen_length_mm",
+      "type": "FLOAT"
+    },
+    {
+      "event_field": "flipper_length_mm_present",
+      "min_count": 1,
+      "min_fraction": 1.0,
+      "monitor_update": "reject-ever-missing-flipper_length_mm",
+      "name": "flipper_length_mm",
+      "retention_atom": "ever-missing-flipper_length_mm",
+      "type": "FLOAT"
+    },
+    {
+      "event_field": "species_present",
+      "min_count": 1,
+      "min_fraction": 1.0,
+      "monitor_update": "reject-ever-missing-species",
+      "name": "species",
+      "retention_atom": "ever-missing-species",
+      "type": "INT"
+    }
+  ],
+  "source": {
+    "commit": "cd99075bfad794a3ea9df49ee77f9c06578f895d",
+    "integration": "exact pinned source file consumed by the narrow projection tool; no TFX runtime or protobuf dependency",
+    "license": "Apache License 2.0",
+    "license_url": "https://github.com/tensorflow/tfx/blob/cd99075bfad794a3ea9df49ee77f9c06578f895d/LICENSE",
+    "local_sha256": "09b4f7acd87714122154dceb215ccd5393f1fab14ba5beda1da4477ed339722a",
+    "name": "TensorFlow TFX penguin user-provided schema",
+    "path": "tfx/examples/penguin/schema/user_provided/schema.pbtxt",
+    "repository": "tensorflow/tfx",
+    "source_url": "https://github.com/tensorflow/tfx/blob/cd99075bfad794a3ea9df49ee77f9c06578f895d/tfx/examples/penguin/schema/user_provided/schema.pbtxt"
+  },
+  "supported_constraint": "feature presence with min_fraction=1.0 and min_count=1"
+}

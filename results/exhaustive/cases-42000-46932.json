@@ -1,0 +1,18 @@
+{
+  "label": "cases-42000-46932",
+  "cases": 4932,
+  "inadmissible": 1730,
+  "disagreements": 0,
+  "scenario_cases": 0,
+  "elapsed_seconds": 0.2658038800000213,
+  "cpu_seconds": 0.261900924,
+  "peak_rss_kib": 93480,
+  "workers": 1,
+  "address_space_limit_bytes": 3221225472,
+  "cpu_limit_seconds": 35,
+  "timed_out": false,
+  "selection": [
+    42000,
+    46932
+  ]
+}

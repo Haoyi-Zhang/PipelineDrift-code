@@ -1,0 +1,15 @@
+{
+  "label": "pilot",
+  "cases": 64,
+  "inadmissible": 24,
+  "disagreements": 0,
+  "scenario_cases": 8,
+  "elapsed_seconds": 0.010380565999980718,
+  "cpu_seconds": 0.010178979999999949,
+  "peak_rss_kib": 93104,
+  "workers": 1,
+  "address_space_limit_bytes": 3221225472,
+  "cpu_limit_seconds": 35,
+  "timed_out": false,
+  "selection": "fixed 64-case pilot"
+}

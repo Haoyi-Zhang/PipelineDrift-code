@@ -1,0 +1,1646 @@
+{
+  "cost": 5,
+  "kind": "optimal_portfolio",
+  "obstruction_basis": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "representatives": [
+    {
+      "fibers": [
+        {
+          "summary_state": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            1,
+            1,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            0,
+            1,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            0,
+            1,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "target_state": 1
+        }
+      ],
+      "update": "reject-ever-missing-body_mass_g"
+    },
+    {
+      "fibers": [
+        {
+          "summary_state": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            1,
+            1,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            0,
+            1,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            0,
+            1,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "target_state": 1
+        }
+      ],
+      "update": "reject-ever-missing-culmen_depth_mm"
+    },
+    {
+      "fibers": [
+        {
+          "summary_state": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            1,
+            1,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            0,
+            1,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            0,
+            1,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "target_state": 1
+        }
+      ],
+      "update": "reject-ever-missing-culmen_length_mm"
+    },
+    {
+      "fibers": [
+        {
+          "summary_state": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            1,
+            1,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            0,
+            1,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            0,
+            1,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "target_state": 1
+        }
+      ],
+      "update": "reject-ever-missing-flipper_length_mm"
+    },
+    {
+      "fibers": [
+        {
+          "summary_state": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            0,
+            1,
+            1,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            0,
+            1,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            0,
+            1,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          "target_state": 1
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "target_state": 0
+        },
+        {
+          "summary_state": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "target_state": 1
+        }
+      ],
+      "update": "reject-ever-missing-species"
+    }
+  ],
+  "selected_atoms": [
+    "ever-missing-body_mass_g",
+    "ever-missing-culmen_depth_mm",
+    "ever-missing-culmen_length_mm",
+    "ever-missing-flipper_length_mm",
+    "ever-missing-species"
+  ],
+  "selected_mask": 31
+}

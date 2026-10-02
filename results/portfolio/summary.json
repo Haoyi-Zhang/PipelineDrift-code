@@ -1,0 +1,67 @@
+{
+  "catalogues": [
+    {
+      "basis_size_max": 1,
+      "basis_size_min": 0,
+      "branch_nodes": 4432,
+      "branch_pruned": 0,
+      "cases": 4096,
+      "certificate_failures": 0,
+      "cpu_seconds": 1.8631676010000002,
+      "feasible_candidate_catalogues": 3664,
+      "max_rss_kib": 95912,
+      "minimum_witness_mismatches": 0,
+      "name": "unary-complete",
+      "optimizer_mismatches": 0,
+      "safe_portfolio_masks": 27280,
+      "safety_equivalence_mismatches": 0,
+      "unsafe_portfolio_masks": 5488,
+      "wall_seconds": 1.860784846000115
+    },
+    {
+      "basis_size_max": 2,
+      "basis_size_min": 0,
+      "branch_nodes": 9868,
+      "branch_pruned": 0,
+      "cases": 16384,
+      "certificate_failures": 0,
+      "cpu_seconds": 4.250572072000001,
+      "feasible_candidate_catalogues": 8428,
+      "max_rss_kib": 96040,
+      "minimum_witness_mismatches": 0,
+      "name": "binary-complete-subspace",
+      "optimizer_mismatches": 0,
+      "safe_portfolio_masks": 31084,
+      "safety_equivalence_mismatches": 0,
+      "unsafe_portfolio_masks": 34452,
+      "wall_seconds": 4.253657287999886
+    }
+  ],
+  "examples": {
+    "all_example_certificates_valid": true,
+    "declarations": 12,
+    "feasible_declarations": 11,
+    "greedy_suboptimal_cases": 1,
+    "infeasible_declarations": 1,
+    "mutated_catalogue_infeasible": 172,
+    "mutation_certificate_failures": 0,
+    "mutation_infeasibility_verification_failures": 0,
+    "mutations": 571,
+    "mutations_decreasing_optimal_cost": 41,
+    "mutations_increasing_optimal_cost": 15,
+    "old_portfolio_became_unsafe": 188,
+    "separate_union_suboptimal_cases": 3
+  },
+  "scope": "bounded finite exact validation; not production prevalence or throughput",
+  "totals": {
+    "cases": 20480,
+    "certificate_failures": 0,
+    "cpu_seconds": 7.240079079,
+    "max_rss_kib": 96040,
+    "minimum_witness_mismatches": 0,
+    "optimizer_mismatches": 0,
+    "portfolio_masks_checked": 98304,
+    "safety_equivalence_mismatches": 0,
+    "wall_seconds": 7.2413768790001996
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "case": "case-b",
+  "description": "Deleting the field used by the last-batch missingness contract loses exact replay information.",
+  "input_cells": [
+    "present",
+    "missing"
+  ],
+  "motivation_source": "Data Validation for Machine Learning, schema constraints",
+  "provenance": "Original constructed finite example; not an upstream bug or workload.",
+  "expected_admissible": false,
+  "contract": {
+    "retain": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "history": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "future": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "output": [
+      0,
+      1
+    ],
+    "initial_retain": 0,
+    "initial_target": 0
+  }
+}

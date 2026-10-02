@@ -1,0 +1,71 @@
+{
+  "case": "case-f",
+  "description": "Increasing a consecutive-low threshold beyond an old saturated counter is not exactly recoverable.",
+  "input_cells": [
+    "normal",
+    "low"
+  ],
+  "motivation_source": "Constructed bounded temporal drift predicate",
+  "provenance": "Original constructed finite example; not an upstream bug or workload.",
+  "expected_admissible": false,
+  "contract": {
+    "retain": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "history": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "future": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "output": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "initial_retain": 0,
+    "initial_target": 0
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "case": "case-d",
+  "description": "Historical states have equal current verdicts, but changed future observations distinguish them.",
+  "input_cells": [
+    "cell zero",
+    "cell one"
+  ],
+  "motivation_source": "Constructed two-epoch negative control",
+  "provenance": "Original constructed finite example; not an upstream bug or workload.",
+  "expected_admissible": false,
+  "contract": {
+    "retain": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "history": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "future": [
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "output": [
+      0,
+      0,
+      1
+    ],
+    "initial_retain": 0,
+    "initial_target": 0
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "commit": "cd99075bfad794a3ea9df49ee77f9c06578f895d",
+  "integration": "exact pinned source file consumed by the narrow projection tool; no TFX runtime or protobuf dependency",
+  "license": "Apache License 2.0",
+  "license_url": "https://github.com/tensorflow/tfx/blob/cd99075bfad794a3ea9df49ee77f9c06578f895d/LICENSE",
+  "local_sha256": "09b4f7acd87714122154dceb215ccd5393f1fab14ba5beda1da4477ed339722a",
+  "name": "TensorFlow TFX penguin user-provided schema",
+  "path": "tfx/examples/penguin/schema/user_provided/schema.pbtxt",
+  "repository": "tensorflow/tfx",
+  "source_url": "https://github.com/tensorflow/tfx/blob/cd99075bfad794a3ea9df49ee77f9c06578f895d/tfx/examples/penguin/schema/user_provided/schema.pbtxt"
+}

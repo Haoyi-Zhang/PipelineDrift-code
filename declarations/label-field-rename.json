@@ -1,0 +1,112 @@
+{
+  "name": "label-field-rename",
+  "metadata": {
+    "motivation": "A label-field rename preserves the same positive-count and last-label predicates across the schema boundary; this is not a label-function rule change."
+  },
+  "history_schema": {
+    "fields": {
+      "old_label": [
+        0,
+        1
+      ]
+    }
+  },
+  "future_schema": {
+    "fields": {
+      "label": [
+        0,
+        1
+      ]
+    }
+  },
+  "retention_atoms": [
+    {
+      "name": "positive-count-2",
+      "kind": "count",
+      "cap": 2,
+      "predicate": {
+        "op": "eq",
+        "args": [
+          {
+            "field": "old_label"
+          },
+          {
+            "const": 1
+          }
+        ]
+      },
+      "initial": 0
+    },
+    {
+      "name": "last-old-label",
+      "kind": "last",
+      "value": {
+        "field": "old_label"
+      },
+      "values": [
+        0,
+        1
+      ],
+      "initial": 0
+    },
+    {
+      "name": "label-histogram-2",
+      "kind": "histogram",
+      "cap": 2,
+      "value": {
+        "field": "old_label"
+      },
+      "values": [
+        0,
+        1
+      ],
+      "initial": 0
+    }
+  ],
+  "monitor_updates": [
+    {
+      "name": "two-positives",
+      "kind": "count_threshold",
+      "threshold": 2,
+      "history_predicate": {
+        "op": "eq",
+        "args": [
+          {
+            "field": "old_label"
+          },
+          {
+            "const": 1
+          }
+        ]
+      },
+      "future_predicate": {
+        "op": "eq",
+        "args": [
+          {
+            "field": "label"
+          },
+          {
+            "const": 1
+          }
+        ]
+      },
+      "initial": 0
+    },
+    {
+      "name": "last-positive",
+      "kind": "last_equals",
+      "history_value": {
+        "field": "old_label"
+      },
+      "future_value": {
+        "field": "label"
+      },
+      "values": [
+        0,
+        1
+      ],
+      "target": 1,
+      "initial": 0
+    }
+  ]
+}

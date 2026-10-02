@@ -1,0 +1,449 @@
+[
+  {
+    "candidate_atoms": 4,
+    "candidate_cost": 6,
+    "certificate_valid": true,
+    "conflict_pairs": 40,
+    "feasible": true,
+    "future_records": 3,
+    "greedy_atoms": [
+      "seen-cat",
+      "seen-dog",
+      "seen-bird"
+    ],
+    "greedy_cost": 3,
+    "greedy_mask": 14,
+    "history_records": 3,
+    "name": "class-coverage",
+    "obstruction_basis": [
+      3,
+      5,
+      9
+    ],
+    "optimal_atoms": [
+      "seen-class-bitset"
+    ],
+    "optimal_cost": 3,
+    "optimal_mask": 1,
+    "per_update_union_atoms": [
+      "seen-cat",
+      "seen-dog",
+      "seen-bird"
+    ],
+    "per_update_union_cost": 3,
+    "per_update_union_mask": 14,
+    "reachable_signatures": [
+      8,
+      8
+    ],
+    "source": "declarations/class-coverage.json",
+    "updates": 2
+  },
+  {
+    "candidate_atoms": 4,
+    "candidate_cost": 7,
+    "certificate_valid": true,
+    "conflict_pairs": 27,
+    "feasible": true,
+    "future_records": 2,
+    "greedy_atoms": [
+      "debug-or-high-count-2"
+    ],
+    "greedy_cost": 2,
+    "greedy_mask": 1,
+    "history_records": 4,
+    "name": "field-deletion",
+    "obstruction_basis": [
+      1
+    ],
+    "optimal_atoms": [
+      "debug-or-high-count-2"
+    ],
+    "optimal_cost": 2,
+    "optimal_mask": 1,
+    "per_update_union_atoms": [
+      "debug-or-high-count-2"
+    ],
+    "per_update_union_cost": 2,
+    "per_update_union_mask": 1,
+    "reachable_signatures": [
+      10
+    ],
+    "source": "declarations/field-deletion.json",
+    "updates": 1
+  },
+  {
+    "candidate_atoms": 4,
+    "candidate_cost": 8,
+    "certificate_valid": true,
+    "conflict_pairs": 120,
+    "feasible": true,
+    "future_records": 4,
+    "greedy_atoms": [
+      "disagreement-count-2"
+    ],
+    "greedy_cost": 2,
+    "greedy_mask": 8,
+    "history_records": 4,
+    "name": "joint-marginals",
+    "obstruction_basis": [
+      8
+    ],
+    "optimal_atoms": [
+      "disagreement-count-2"
+    ],
+    "optimal_cost": 2,
+    "optimal_mask": 8,
+    "per_update_union_atoms": [
+      "disagreement-count-2"
+    ],
+    "per_update_union_cost": 2,
+    "per_update_union_mask": 8,
+    "reachable_signatures": [
+      19
+    ],
+    "source": "declarations/joint-marginals.json",
+    "updates": 1
+  },
+  {
+    "candidate_atoms": 5,
+    "candidate_cost": 10,
+    "certificate_valid": true,
+    "conflict_pairs": 712,
+    "feasible": true,
+    "future_records": 4,
+    "greedy_atoms": [
+      "disagreement-count-2",
+      "last-joint-label"
+    ],
+    "greedy_cost": 5,
+    "greedy_mask": 5,
+    "history_records": 4,
+    "name": "label-disagreement",
+    "obstruction_basis": [
+      1,
+      4
+    ],
+    "optimal_atoms": [
+      "disagreement-count-2",
+      "last-joint-label"
+    ],
+    "optimal_cost": 5,
+    "optimal_mask": 5,
+    "per_update_union_atoms": [
+      "disagreement-count-2",
+      "last-joint-label"
+    ],
+    "per_update_union_cost": 5,
+    "per_update_union_mask": 5,
+    "reachable_signatures": [
+      39,
+      39
+    ],
+    "source": "declarations/label-disagreement.json",
+    "updates": 2
+  },
+  {
+    "candidate_atoms": 3,
+    "candidate_cost": 8,
+    "certificate_valid": true,
+    "conflict_pairs": 97,
+    "feasible": true,
+    "future_records": 2,
+    "greedy_atoms": [
+      "positive-count-2",
+      "last-old-label"
+    ],
+    "greedy_cost": 4,
+    "greedy_mask": 3,
+    "history_records": 2,
+    "name": "label-field-rename",
+    "obstruction_basis": [
+      2,
+      5
+    ],
+    "optimal_atoms": [
+      "positive-count-2",
+      "last-old-label"
+    ],
+    "optimal_cost": 4,
+    "optimal_mask": 3,
+    "per_update_union_atoms": [
+      "positive-count-2",
+      "last-old-label"
+    ],
+    "per_update_union_cost": 4,
+    "per_update_union_mask": 3,
+    "reachable_signatures": [
+      13,
+      13
+    ],
+    "source": "declarations/label-field-rename.json",
+    "updates": 2
+  },
+  {
+    "candidate_atoms": 3,
+    "candidate_cost": 6,
+    "certificate_valid": true,
+    "conflict_pairs": 120,
+    "feasible": false,
+    "future_records": 4,
+    "greedy_atoms": [],
+    "greedy_cost": null,
+    "greedy_mask": null,
+    "history_records": 4,
+    "name": "marginals-only-infeasible",
+    "obstruction_basis": [
+      0
+    ],
+    "optimal_atoms": [],
+    "optimal_cost": null,
+    "optimal_mask": null,
+    "per_update_union_atoms": [],
+    "per_update_union_cost": null,
+    "per_update_union_mask": null,
+    "reachable_signatures": [
+      19
+    ],
+    "source": "declarations/marginals-only-infeasible.json",
+    "updates": 1
+  },
+  {
+    "candidate_atoms": 4,
+    "candidate_cost": 8,
+    "certificate_valid": true,
+    "conflict_pairs": 55,
+    "feasible": true,
+    "future_records": 2,
+    "greedy_atoms": [
+      "ever-missing",
+      "missing-run-2"
+    ],
+    "greedy_cost": 3,
+    "greedy_mask": 3,
+    "history_records": 2,
+    "name": "missingness-streak",
+    "obstruction_basis": [
+      5,
+      10
+    ],
+    "optimal_atoms": [
+      "ever-missing",
+      "missing-run-2"
+    ],
+    "optimal_cost": 3,
+    "optimal_mask": 3,
+    "per_update_union_atoms": [
+      "ever-missing",
+      "missing-run-2"
+    ],
+    "per_update_union_cost": 3,
+    "per_update_union_mask": 3,
+    "reachable_signatures": [
+      11,
+      11
+    ],
+    "source": "declarations/missingness-streak.json",
+    "updates": 2
+  },
+  {
+    "candidate_atoms": 4,
+    "candidate_cost": 10,
+    "certificate_valid": true,
+    "conflict_pairs": 162,
+    "feasible": true,
+    "future_records": 2,
+    "greedy_atoms": [
+      "last-three-alarms"
+    ],
+    "greedy_cost": 4,
+    "greedy_mask": 1,
+    "history_records": 2,
+    "name": "rolling-pattern",
+    "obstruction_basis": [
+      1
+    ],
+    "optimal_atoms": [
+      "last-three-alarms"
+    ],
+    "optimal_cost": 4,
+    "optimal_mask": 1,
+    "per_update_union_atoms": [
+      "last-three-alarms",
+      "alarm-run-2"
+    ],
+    "per_update_union_cost": 6,
+    "per_update_union_mask": 5,
+    "reachable_signatures": [
+      16,
+      16
+    ],
+    "source": "declarations/rolling-pattern.json",
+    "updates": 2
+  },
+  {
+    "candidate_atoms": 4,
+    "candidate_cost": 9,
+    "certificate_valid": true,
+    "conflict_pairs": 97,
+    "feasible": true,
+    "future_records": 2,
+    "greedy_atoms": [
+      "bad-count-2",
+      "last-status"
+    ],
+    "greedy_cost": 4,
+    "greedy_mask": 3,
+    "history_records": 2,
+    "name": "schema-rename-status",
+    "obstruction_basis": [
+      2,
+      5
+    ],
+    "optimal_atoms": [
+      "bad-count-2",
+      "last-status"
+    ],
+    "optimal_cost": 4,
+    "optimal_mask": 3,
+    "per_update_union_atoms": [
+      "bad-count-2",
+      "last-status"
+    ],
+    "per_update_union_cost": 4,
+    "per_update_union_mask": 3,
+    "reachable_signatures": [
+      13,
+      13
+    ],
+    "source": "declarations/schema-rename-status.json",
+    "updates": 2
+  },
+  {
+    "candidate_atoms": 4,
+    "candidate_cost": 8,
+    "certificate_valid": true,
+    "conflict_pairs": 464,
+    "feasible": true,
+    "future_records": 4,
+    "greedy_atoms": [
+      "seen-error-A",
+      "seen-error-B",
+      "global-error-count-2"
+    ],
+    "greedy_cost": 4,
+    "greedy_mask": 14,
+    "history_records": 4,
+    "name": "slice-regression",
+    "obstruction_basis": [
+      8,
+      3,
+      5
+    ],
+    "optimal_atoms": [
+      "seen-error-A",
+      "seen-error-B",
+      "global-error-count-2"
+    ],
+    "optimal_cost": 4,
+    "optimal_mask": 14,
+    "per_update_union_atoms": [
+      "seen-error-A",
+      "seen-error-B",
+      "global-error-count-2"
+    ],
+    "per_update_union_cost": 4,
+    "per_update_union_mask": 14,
+    "reachable_signatures": [
+      24,
+      24,
+      24
+    ],
+    "source": "declarations/slice-regression.json",
+    "updates": 3
+  },
+  {
+    "candidate_atoms": 4,
+    "candidate_cost": 7,
+    "certificate_valid": true,
+    "conflict_pairs": 56,
+    "feasible": true,
+    "future_records": 2,
+    "greedy_atoms": [
+      "error-count-3"
+    ],
+    "greedy_cost": 2,
+    "greedy_mask": 4,
+    "history_records": 2,
+    "name": "threshold-family",
+    "obstruction_basis": [
+      4
+    ],
+    "optimal_atoms": [
+      "error-count-3"
+    ],
+    "optimal_cost": 2,
+    "optimal_mask": 4,
+    "per_update_union_atoms": [
+      "ever-error",
+      "error-count-2",
+      "error-count-3"
+    ],
+    "per_update_union_cost": 5,
+    "per_update_union_mask": 7,
+    "reachable_signatures": [
+      8,
+      8,
+      8
+    ],
+    "source": "declarations/threshold-family.json",
+    "updates": 3
+  },
+  {
+    "candidate_atoms": 5,
+    "candidate_cost": 16,
+    "certificate_valid": true,
+    "conflict_pairs": 52,
+    "feasible": true,
+    "future_records": 3,
+    "greedy_atoms": [
+      "seen-x-or-y",
+      "seen-z",
+      "seen-y-or-z",
+      "seen-x"
+    ],
+    "greedy_cost": 11,
+    "greedy_mask": 29,
+    "history_records": 3,
+    "name": "weighted-greedy-trap",
+    "obstruction_basis": [
+      4,
+      16,
+      3,
+      10
+    ],
+    "optimal_atoms": [
+      "seen-y",
+      "seen-z",
+      "seen-x"
+    ],
+    "optimal_cost": 10,
+    "optimal_mask": 22,
+    "per_update_union_atoms": [
+      "seen-x-or-y",
+      "seen-z",
+      "seen-y-or-z",
+      "seen-x"
+    ],
+    "per_update_union_cost": 11,
+    "per_update_union_mask": 29,
+    "reachable_signatures": [
+      8,
+      8,
+      8,
+      8
+    ],
+    "source": "declarations/weighted-greedy-trap.json",
+    "updates": 4
+  }
+]

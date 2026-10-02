@@ -1,0 +1,12 @@
+{
+  "certificate_failures": 0,
+  "feasible_problems": 183,
+  "infeasible_problems": 73,
+  "optimizer_mismatches": 0,
+  "portfolio_masks_checked": 2348,
+  "problems": 256,
+  "safety_mismatches": 0,
+  "scope": "fixed-seed bounded differential fault detection; not a statistical population estimate",
+  "seed": 20260915,
+  "status": "pass"
+}

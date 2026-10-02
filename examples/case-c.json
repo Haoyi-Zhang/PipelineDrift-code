@@ -1,0 +1,106 @@
+{
+  "case": "case-c",
+  "description": "Identical per-label-function marginals do not determine joint disagreement.",
+  "input_cells": [
+    "aligned batch",
+    "disagreeing batch"
+  ],
+  "motivation_source": "Overton, Section 2.2 (conflicting supervision)",
+  "provenance": "Original constructed finite example; not an upstream bug or workload.",
+  "expected_admissible": false,
+  "contract": {
+    "retain": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "history": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "future": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "output": [
+      0,
+      1
+    ],
+    "initial_retain": 0,
+    "initial_target": 0
+  },
+  "raw_batches": [
+    [
+      [
+        1,
+        1
+      ],
+      [
+        -1,
+        -1
+      ]
+    ],
+    [
+      [
+        1,
+        -1
+      ],
+      [
+        -1,
+        1
+      ]
+    ]
+  ],
+  "per_function_histograms": [
+    [
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ]
+    ]
+  ],
+  "disagreement_counts": [
+    0,
+    2
+  ],
+  "label_alphabet": {
+    "negative": -1,
+    "abstain": 0,
+    "positive": 1
+  }
+}
