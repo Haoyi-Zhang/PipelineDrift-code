@@ -125,5 +125,3 @@ before external use.
 Project code and original documentation are under the MIT License in `LICENSE`.
 The pinned TFX schema is redistributed under Apache License 2.0 with its source
 record and license. Scholarly papers are cited but not redistributed.
-Substantive generative-AI assistance affected formulation, proofs, code,
-experiments, and manuscript preparation; the paper retains a truthful disclosure.
