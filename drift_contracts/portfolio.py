@@ -2,6 +2,7 @@
 from __future__ import annotations
 from collections import deque
 from dataclasses import dataclass
+from fractions import Fraction
 from functools import lru_cache
 from itertools import combinations
 from typing import Any
@@ -225,14 +226,14 @@ def greedy_portfolio(problem: PortfolioProblem, analysis: ConflictAnalysis,
     remaining = set(obligations if obligations is not None else analysis.obligations)
     selected = 0
     while remaining:
-        choices: list[tuple[float, int, int, str]] = []
+        choices: list[tuple[Fraction, int, int, str]] = []
         for i, atom in enumerate(problem.atoms):
             bit = 1 << i
             if selected & bit:
                 continue
             covered = sum(1 for obligation in remaining if obligation & bit)
             if covered:
-                choices.append((atom.cost / covered, atom.cost, i, atom.name))
+                choices.append((Fraction(atom.cost, covered), atom.cost, i, atom.name))
         if not choices:
             return None
         _, _, i, _ = min(choices)
@@ -312,7 +313,7 @@ def optimize_portfolio(problem: PortfolioProblem, analysis: ConflictAnalysis,
                                             if o >> i & 1), o))
         candidates = [i for i in range(len(problem.atoms)) if obligation >> i & 1]
         candidates.sort(key=lambda i: (
-            problem.atoms[i].cost / sum(1 for o in remaining if o >> i & 1),
+            Fraction(problem.atoms[i].cost, sum(1 for o in remaining if o >> i & 1)),
             problem.atoms[i].cost, -sum(1 for o in remaining if o >> i & 1),
             problem.atoms[i].name))
         for i in candidates:
