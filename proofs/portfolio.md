@@ -182,8 +182,9 @@ all candidate atoms and the update, `q_u` its target state count, `a=|H|`,
 all `k` atom states and the target, so reachability costs `O(a M_u (k+1))`
 primitive updates.  Target-pair future distances cost `O(b q_u^2)`; explicit
 endpoint-pair separator construction costs `O(k M_u^2)` before basis
-minimization.  Reconstructing two historical prefixes and one future suffix is
-linear in their emitted length, while deterministic ties can compare words
+minimization.  Reconstructing two historical prefixes and one future suffix
+costs `O(|h_left| + |h_right| + b |future|)`: suffix reconstruction scans
+the future alphabet at each step.  Deterministic ties can compare words
 lexicographically up to that length.  Exhaustive bounded verification may
 inspect `2^k` subsets, and obstruction minimization and exact hitting-set search
 remain exponential in their finite inputs.  The present implementation is

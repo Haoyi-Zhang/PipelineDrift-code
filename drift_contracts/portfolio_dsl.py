@@ -29,7 +29,11 @@ def _freeze(value: Any) -> Any:
     if isinstance(value, (list, tuple)):
         return tuple(_freeze(item) for item in value)
     if isinstance(value, dict):
-        return tuple(sorted((str(key), _freeze(item)) for key, item in value.items()))
+        if any(type(key) is not str for key in value):
+            raise ValueError("JSON object keys must be strings")
+        # Canonical key order must not erase the object/array distinction.
+        # An object is not the array of its key/value pairs.
+        return {key: _freeze(value[key]) for key in sorted(value)}
     if value is None or type(value) in (bool, int, str):
         return value
     raise ValueError(f"unsupported JSON value {value!r}")

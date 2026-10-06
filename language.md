@@ -21,7 +21,10 @@ Predicates must evaluate to JSON Booleans on every enumerated record.
 
 `eq`, `ne`, and `in` use the same exact typed-value relation. In particular,
 JSON `false`/`true` are distinct from integer `0`/`1`, despite Python host
-language equality. Membership and `required` arrays have mathematical set
+language equality. Arrays compare componentwise with this same relation;
+objects compare by their string-key sets and corresponding typed values,
+independently of key order. An object is distinct from an array of its key/value
+pairs, including when nested. Membership and `required` arrays have mathematical set
 semantics: duplicates are idempotent. The independent reference interpreter
 implements this relation separately and includes a regression mutation that
 restores Python's Boolean/integer aliasing.

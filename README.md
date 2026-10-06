@@ -18,8 +18,15 @@ production deployment.
 The recorded release check was run on Linux with CPython 3.10 or newer, one
 worker, at least 512 MiB available memory and 250 MiB free disk. The runner
 applies a 3 GiB address-space limit and a 60-second child CPU limit. macOS,
-Windows, PyPy, and other Python versions were not tested; no cross-platform
-claim is made.
+Windows, PyPy, and other Python versions were not tested in that release;
+no cross-platform release claim is made. A later local Windows check with
+bundled CPython 3.12.14 passed 72 artifact tests, including six regressions for
+recursively typed JSON containers. The repair keeps objects distinct from
+arrays of key/value pairs, including in schema domains and finite-value
+primitives. An owned finite replay retained the shipped catalogue, mutation,
+migration and counter outcomes; separate language, generated-problem, cost and
+source-projection checks also retained their scientific results. These local
+checks did not run the Linux-only release wrapper or replace its measurements.
 
 ## Quick start
 
@@ -65,6 +72,13 @@ peak-memory values are recorded but not equality criteria.
 A successful run means that the shipped bounded calculations reproduced. It is
 not a proof-assistant result, full TFX/TFDV integration, production validation,
 or independent peer review.
+
+The prepared `.github/workflows/scientific-checks.yml` runs this same complete
+release path from a flat artifact-repository root on Ubuntu 24.04 and CPython
+3.12. It retains the scientific failure gates, bounds the whole command to
+12 minutes (plus a 10-second termination grace), limits each process to 3 GiB
+address space, and uploads available raw output even on failure. Preparation of
+this workflow does not constitute a hosted execution result.
 
 ## Reported bounded evidence
 

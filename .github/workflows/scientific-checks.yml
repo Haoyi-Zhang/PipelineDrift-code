@@ -1,0 +1,47 @@
+name: Bounded scientific checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  finite-reproduction:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      PYTHONUTF8: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONOPTIMIZE: '0'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Reproduce finite checks from the flat artifact root
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir scientific-run-output
+          python -B -c 'import sys; assert not sys.flags.optimize' \
+            > scientific-run-output/assertions.txt
+          ulimit -v 3145728
+          ulimit -t 600
+          timeout --signal=TERM --kill-after=10s 12m \
+            python -B tools/release_check.py \
+              --output scientific-run-output/release \
+            2>&1 | tee scientific-run-output/console.txt
+      - name: Retain raw outputs even on failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: finite-scientific-outputs
+          path: scientific-run-output/
+          if-no-files-found: warn
+          retention-days: 14

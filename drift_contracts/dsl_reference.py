@@ -18,7 +18,9 @@ def _freeze(value: Any) -> Any:
     if isinstance(value, (list, tuple)):
         return tuple(_freeze(x) for x in value)
     if isinstance(value, dict):
-        return tuple(sorted((str(k), _freeze(v)) for k, v in value.items()))
+        if not all(type(k) is str for k in value):
+            raise ValueError("object keys must be JSON strings")
+        return {k: _freeze(v) for k, v in sorted(value.items())}
     if value is None or type(value) in (bool, int, str):
         return value
     raise ValueError(f"unsupported value {value!r}")
@@ -37,6 +39,9 @@ def _same_value(left: Any, right: Any) -> bool:
     if isinstance(left, tuple):
         return len(left) == len(right) and all(
             _same_value(a, b) for a, b in zip(left, right))
+    if isinstance(left, dict):
+        return left.keys() == right.keys() and all(
+            _same_value(left[k], right[k]) for k in left)
     return left == right
 
 
@@ -255,9 +260,9 @@ def check_compilation(document: dict[str, Any], problem: PortfolioProblem) -> di
     """Recompute transitions, outputs, explicit initials, and empty histories."""
     history_records = _records(document["history_schema"])
     future_records = _records(document["future_schema"])
-    if tuple(problem.metadata["history_records"]) != history_records:
+    if not _same_value(tuple(problem.metadata["history_records"]), history_records):
         raise AssertionError("history record enumeration mismatch")
-    if tuple(problem.metadata["future_records"]) != future_records:
+    if not _same_value(tuple(problem.metadata["future_records"]), future_records):
         raise AssertionError("future record enumeration mismatch")
     if len(document["retention_atoms"]) != len(problem.atoms):
         raise AssertionError("retention atom count mismatch")

@@ -68,13 +68,17 @@ carry independently checkable evidence.
 The artifact consumes one exact public file: the TFX penguin user-provided
 schema pinned to commit `cd99075bfad794a3ea9df49ee77f9c06578f895d`.
 Only five features with both `min_fraction=1.0` and `min_count=1` are projected.
-Each source constraint becomes one Boolean event field meaning that the feature
-is present in a finite batch summary, one ever-missing retention atom, and one
+Each source constraint becomes one Boolean event field that is true exactly
+when the batch is nonempty and every example contains the feature, one
+ever-missing retention atom, and one
 ever-missing monitor. The source file, Apache-2.0 license, source locator, local
 digest, projection map, generated declaration, result, and certificate are
 shipped under `external/tfx-penguin/` and `results/tfx-projection/`. This is a
 provenance-preserving front-end example, not a claim that the compiler accepts
 TFDV protobufs or executes TFX.
+The caller must supply that Boolean batch abstraction; no raw-batch adapter is
+provided. Presence counts examples containing a feature, not the total number
+of scalar values inside a possibly multivalued feature.
 
 The declaration named `label-field-rename` is intentionally narrower: it changes
 only a field name and keeps the finite predicates truth-table equivalent. It is
