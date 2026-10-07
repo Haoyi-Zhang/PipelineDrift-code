@@ -141,7 +141,16 @@ regressions, not separate novelty claims.
 The recorded supported path is Linux with CPython 3.10 or newer, one worker, no
 network, no third-party Python package, at least 512 MiB available memory and
 250 MiB free disk. The runner uses a 3 GiB address-space limit and a 60-second
-child CPU limit. Other operating systems and interpreters were not tested.
+child CPU limit. The historical Debian/CPython 3.13.5 release ran 66 tests;
+the current Linux reproduction record lists 16 completed commands, 72 passed
+tests, and 28 matched deterministic records. Its recorded wall time is
+10.974 seconds, child CPU time is 10.547 seconds, and maximum child RSS is
+42,068 KiB. Historical Debian measurements are retained separately.
+
+The reported Windows/CPython 3.12.14 checks exercised the 72-test suite,
+paper-side rendering tests, typed JSON operations, and finite result subsets.
+They did not run the complete resource-limited Linux wrapper. The Linux path
+above remains the documented complete reproduction procedure.
 
 Run from the standalone root with a new output directory:
 
