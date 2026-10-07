@@ -33,6 +33,9 @@ jobs:
             > scientific-run-output/assertions.txt
           ulimit -v 3145728
           ulimit -t 600
+          timeout --signal=TERM --kill-after=10s 60s \
+            python -B tests/regression_shortcuts.py -v \
+            2>&1 | tee scientific-run-output/shortcut-regression.txt
           timeout --signal=TERM --kill-after=10s 12m \
             python -B tools/release_check.py \
               --output scientific-run-output/release \

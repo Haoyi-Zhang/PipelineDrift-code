@@ -162,7 +162,8 @@ def build_conflict_analysis(problem: PortfolioProblem) -> ConflictAnalysis:
         update_masks: set[int] = set()
         for left, right in combinations(states, 2):
             p, q = left[-1], right[-1]
-            if distances[p * n + q] is None:
+            distance = distances[p * n + q]
+            if distance is None:
                 continue
             conflict_pairs += 1
             mask = 0
@@ -173,10 +174,14 @@ def build_conflict_analysis(problem: PortfolioProblem) -> ConflictAnalysis:
             pp, qq = p, q
             if (len(h2), h2, right) < (len(h1), h1, left):
                 h1, h2, pp, qq = h2, h1, q, p
-            witness = Witness(u_index, h1, h2, _suffix(update, pp, qq, distances),
-                              mask, pp, qq)
             update_masks.add(mask)
             previous = best_by_mask.get(mask)
+            # Event cost is the primary Witness.key component. Equal-cost
+            # candidates still require the complete lexical comparison.
+            if previous is not None and len(h1) + len(h2) + distance > previous.cost:
+                continue
+            witness = Witness(u_index, h1, h2, _suffix(update, pp, qq, distances),
+                              mask, pp, qq)
             if previous is None or witness.key() < previous.key():
                 best_by_mask[mask] = witness
         if 0 in update_masks:

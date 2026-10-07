@@ -50,6 +50,21 @@ The threshold declaration has joint optimum cost 2 versus per-update-union cost
 joint-summary control and remains infeasible even when all three marginal atoms
 are retained.
 
+An additional portable regression can be run explicitly:
+
+```sh
+python -B tests/regression_shortcuts.py -v
+```
+
+The scientific CI also runs this separate step. It uses literal word enumeration
+for every unary-catalogue analysis and focused lexical/empty-separator controls,
+plus independent typed histogram/window table fixtures and rejection/cap checks.
+Witness construction skips only strictly higher event costs for the same
+separator; equal-cost lexical ties, all conflict counts and all separator
+witnesses remain. Histogram/window record expressions are prepared once per
+branch after dimension guards. No measured speedup is claimed. The separate
+extension does not relabel the retained 72-test receipt or historical campaigns.
+
 ## Complete release check
 
 The output directory must not already exist:

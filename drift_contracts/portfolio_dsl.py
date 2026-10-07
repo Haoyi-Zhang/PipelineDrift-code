@@ -177,8 +177,8 @@ def _cost(spec: dict[str, Any], states: int) -> int:
     return value
 
 
-def _table(states: tuple[Any, ...], records: tuple[Record, ...],
-           step: Callable[[Any, Record], Any], name: str) -> tuple[tuple[int, ...], ...]:
+def _table(states: tuple[Any, ...], records: tuple[Any, ...],
+           step: Callable[[Any, Any], Any], name: str) -> tuple[tuple[int, ...], ...]:
     require_machine_budget(len(states), len(records), tables=1, name=name)
     index = {_typed_key(state): i for i, state in enumerate(states)}
     if len(index) != len(states):
@@ -307,28 +307,25 @@ def _compile_atom(spec_value: Any, records: tuple[Record, ...]) -> RetentionAtom
         if any(_typed_key(value) not in lookup for value in observed):
             raise ValueError(f"atom {name} observes a value outside values")
         states = tuple(product(range(cap + 1), repeat=len(values)))
+        observed_indices = tuple(lookup[_typed_key(value)] for value in observed)
 
-        def hist_step(state: tuple[int, ...], record: Record) -> tuple[int, ...]:
-            idx = lookup[_typed_key(_eval(spec["value"], record))]
+        def hist_step(state: tuple[int, ...], idx: int) -> tuple[int, ...]:
             result = list(state)
             result[idx] = min(cap, result[idx] + 1)
             return tuple(result)
 
-        table = _table(states, records, hist_step, f"atom {name}")
+        table = _table(states, observed_indices, hist_step, f"atom {name}")
     elif kind == "window":
         width = spec["width"]
         state_count = _window_state_count(width)
         require_machine_budget(state_count, len(records), tables=1, name=f"atom {name}")
         states = _window_states(width)
-        predicate = spec["predicate"]
+        truth = _bools(spec["predicate"], records, f"atom {name} predicate")
 
-        def window_step(state: tuple[bool, ...], record: Record) -> tuple[bool, ...]:
-            value = _eval(predicate, record)
-            if type(value) is not bool:
-                raise ValueError(f"atom {name} predicate must evaluate to a Boolean")
+        def window_step(state: tuple[bool, ...], value: bool) -> tuple[bool, ...]:
             return (state + (value,))[-width:]
 
-        table = _table(states, records, window_step, f"atom {name}")
+        table = _table(states, truth, window_step, f"atom {name}")
     else:  # pragma: no cover - guarded by field schema
         raise AssertionError(kind)
     initial = _explicit_initial(spec, len(states), f"retention atom {name}")
@@ -478,16 +475,20 @@ def _compile_monitor_machine(spec: dict[str, Any], history_records: tuple[Record
                                tables=2, name=f"update {name}")
         states = _window_states(width)
 
-        def make_step(expr: Any) -> Callable[[tuple[bool, ...], Record], tuple[bool, ...]]:
-            def step(state: tuple[bool, ...], record: Record) -> tuple[bool, ...]:
+        def window_step(state: tuple[bool, ...], value: bool) -> tuple[bool, ...]:
+            return (state + (value,))[-width:]
+
+        def make_table(expr: Any, records: tuple[Record, ...], table_name: str):
+            truth = []
+            for record in records:
                 value = _eval(expr, record)
                 if type(value) is not bool:
                     raise ValueError(f"update {name} predicate must be Boolean")
-                return (state + (value,))[-width:]
-            return step
+                truth.append(value)
+            return _table(states, tuple(truth), window_step, table_name)
 
-        history = _table(states, history_records, make_step(hp), f"update {name} history")
-        future = _table(states, future_records, make_step(fp), f"update {name} future")
+        history = make_table(hp, history_records, f"update {name} history")
+        future = make_table(fp, future_records, f"update {name} future")
         output = tuple(int(state == pattern) for state in states)
     else:  # pragma: no cover - guarded by field schema
         raise AssertionError(kind)
